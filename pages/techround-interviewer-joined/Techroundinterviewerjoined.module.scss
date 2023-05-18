@@ -1,0 +1,246 @@
+@import "../../styles/variables.scss";
+
+.TechInterviewerJoinedSection {
+  padding-top: 48px;
+}
+
+.editorWrapper {
+  min-height: calc(100vh - 48px);
+  display: flex;
+  padding: 16px 0 16px;
+}
+.editorOptionsWrapper {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+.questionSpace {
+  flex-basis: 20%;
+  height: 100%;
+  background: $color-blue-3;
+  border-radius: 8px;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  h2 {
+    padding-bottom: 12px;
+    @include font-semibold-14($line-height: 24px);
+    color: #919bac;
+  }
+  .LapBtn {
+    margin-top: auto;
+  }
+  .LapCount {
+    padding-left: 10px;
+  }
+}
+.editorSpace {
+  flex-basis: 47%;
+  height: 100%;
+  background: $color-blue-3;
+  border-radius: 8px;
+  min-height: 100px;
+}
+.outputSpace {
+  flex-basis: 33%;
+  display: flex;
+  flex-direction: column;
+}
+
+.outputWrapper {
+  background: $color-blue-3;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  flex-grow: 1;
+  [class="ant-tabs-content-holder"] {
+    margin: 0 0 4px 0;
+    padding: 10px 0 0px;
+    background-color: $color-blue-3;
+  }
+  [role="tablist"] {
+    border-bottom: 1px solid #414a5a;
+  }
+  [class="ant-tabs-tab-btn"] {
+    padding: 8px 16px 8px;
+  }
+  [class*="ant-tabs"] {
+    [class="ant-tabs-nav-list"] {
+      [class*="ant-tabs-tab-active"] {
+        [class="ant-tabs-tab-btn"] {
+          color: $color-white-0 !important;
+        }
+      }
+    }
+  }
+}
+.joinedWrapper {
+  min-height: 166px;
+}
+.joinedPerson {
+  [class*="PersonAudioWrapper"] {
+    display: inline-flex;
+  }
+}
+.peopleWrapper {
+  display: flex;
+}
+.questionsWrapper {
+  margin-top: 12px;
+}
+.QuestionsDivider {
+  margin: 0 0 12px;
+}
+.accordionWrapper {
+  color: #919bac;
+  [class*="ant-collapse-header"] {
+    padding: 0 !important;
+  }
+  [class*="ant-collapse-arrow"] {
+    svg {
+      color: $color-white-0;
+      transform: rotate(90deg);
+    }
+  }
+  [aria-expanded="true"] {
+    [class*="ant-collapse-arrow"] {
+      svg {
+        transform: rotate(270deg) !important;
+      }
+    }
+  }
+  [class*="ant-collapse-content-box"] {
+    padding: 10px 0 0 !important;
+  }
+  [class*="ant-collapse-item-active"] {
+    background: #121826;
+  }
+  [class*="ant-collapse-arrow"] {
+    opacity: 0;
+    svg {
+      color: $color-white-0;
+      transform: rotate(0deg);
+    }
+  }
+  [aria-expanded="true"] {
+    [class*="ant-collapse-arrow"] {
+      opacity: 1;
+      svg {
+        transform: rotate(0deg) !important;
+      }
+    }
+  }
+  button {
+    width: 100%;
+    background: transparent;
+  }
+  .accordionRating {
+    background: initial;
+    &:last-of-type {
+      padding-bottom: 18px;
+      margin-bottom: 0px;
+      border-radius: 0 !important;
+    }
+
+    [class*="ant-collapse-content-box"] {
+      display: none;
+    }
+    [class*="ant-collapse-arrow"] {
+      opacity: 1;
+      svg {
+        transform: rotate(0deg) !important;
+      }
+    }
+    .accordionTitle {
+      h3 {
+        line-height: unset;
+      }
+    }
+  }
+}
+.reviewedQuestionsWrapper {
+  border-bottom: 1px solid #414a5a;
+  border-radius: 0;
+  margin-bottom: 12px;
+}
+.accordionItem {
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 8px !important;
+}
+.accordionTitle {
+  h3 {
+    color: $color-white-0;
+    @include font-medium-14($line-height: 19px);
+  }
+}
+.unpushedQuestionTitle {
+  h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    padding-right: 16px;
+  }
+}
+.TitleRating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: space-between;
+  span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .RightArrowIcon {
+    svg {
+      font-size: 12px;
+    }
+  }
+}
+
+.TitleRateIcon {
+  font-size: 12px;
+}
+
+.RateIcon {
+  svg {
+    fill: $color-yellow-0;
+    font-size: 12px;
+  }
+}
+
+.questionPushedTitle {
+  display: flex;
+  justify-content: space-between;
+  h3 {
+    color: $color-white-0;
+    @include font-medium-14($line-height: 19px);
+  }
+}
+
+.InfoIcon {
+  color: #919bac;
+  &:hover {
+    color: $color-green-0;
+  }
+  svg {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 992px) {
+  .outputWrapper {
+    min-height: 516px;
+  }
+}
+
+@media (max-width: 992px) {
+  .editorWrapper {
+    padding: 29px 0 16px;
+  }
+  .editorOptionsWrapper {
+    flex-direction: column;
+  }
+}

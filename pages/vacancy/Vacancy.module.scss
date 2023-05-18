@@ -1,0 +1,163 @@
+@import "styles/variables.scss";
+
+.vacancy {
+  padding: 12px 0 22px;
+  .openVacancy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  .vacancyWrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(432px, 1fr));
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+  }
+  @media (min-width: 768px) {
+    .AddBtnWrapper {
+      display: none;
+    }
+  }
+  @media (max-width: 1280px) {
+    .vacancyWrapper {
+      gap: 10px;
+    }
+  }
+  @media (max-width: 991px) {
+    .vacancyWrapper {
+      justify-content: center;
+    }
+  }
+  @media (max-width: 768px) {
+    padding: 10px 0 80px;
+    .vacancyWrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+      grid-column-gap: 24px;
+      grid-row-gap: 24px;
+    }
+    .openVacancy {
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .AddBtnDesk {
+      display: none;
+    }
+    .vacancyWrapper {
+      gap: 24px;
+    }
+    .AddBtnWrapper {
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      padding: 10px 15px;
+      background-color: $color-white-0;
+      .AddBtnMobile {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.video {
+  padding: 30px 15px;
+  text-align: center;
+  background: $color-white-0;
+  border-radius: 8px;
+  min-height: calc(100vh - 95px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .videoHeading {
+    margin-bottom: 32px;
+    h1 {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 12px;
+      color: $color-green-1;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 12px;
+      color: $color-green-1;
+    }
+  }
+
+  .videoSteps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 32px 0;
+  }
+  .stepNumber {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 15px;
+    margin-right: 14px;
+    border: 1px solid $color-white-2;
+    border-radius: 55px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: $color-green-2;
+  }
+  .stepText {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: $color-green-2;
+  }
+  .righticon {
+    margin-inline: 31px;
+    font-size: 16px;
+    color: $color-black-2;
+  }
+
+  @media (max-width: 768px) {
+    padding: 50px 10px;
+    .videoSteps {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .righticon {
+      transform: rotate(90deg);
+    }
+    .stepNumber {
+      margin-right: 0;
+    }
+  }
+}
+.videoWrapper {
+  position: relative;
+  width: 440px;
+  height: 259px;
+  max-width: 100%;
+  margin-inline: auto;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-radius: 8px;
+  .iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.vacancyFilter {
+  [class="ant-select-arrow"] {
+    top: 60% !important;
+  }
+}

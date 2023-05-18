@@ -1,0 +1,82 @@
+@import "styles/variables.scss";
+
+.Container {
+  .Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1rem;
+
+    h3 {
+      @include font-bold-16($line-height: 23px);
+      color: $color-green-1;
+    }
+
+    h4 {
+      @include font-medium-14($line-height: 22px);
+      color: $color-green-3;
+    }
+  }
+
+  .Body {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.DataBox {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid;
+
+  .DataBoxHeader {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+
+    h5 {
+      @include font-medium-14($line-height: 22px);
+    }
+  }
+  .presence {
+    background-color: $color-green-5;
+
+    h5 {
+      color: $color-green-0;
+    }
+  }
+  .absence {
+    background-color: $color-red-1;
+
+    h5 {
+      color: $color-yellow-0;
+    }
+  }
+
+  .DataBoxBody {
+    padding: 1.5rem;
+    text-align: center;
+
+    h4 {
+      @include font-semibold-22($line-height: 26px);
+      color: $color-green-1;
+    }
+  }
+}
+
+.presenceContainer {
+  border-color: $color-green-5;
+}
+
+.absenceContainer {
+  border-color: $color-red-1;
+}
+
+.HRule {
+  border: 1px solid $color-green-5;
+  margin-top: 1.8rem;
+  margin-bottom: 1.5rem;
+}

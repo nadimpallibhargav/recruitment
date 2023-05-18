@@ -1,0 +1,65 @@
+@import "styles/variables.scss";
+
+.PieGraphLabel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  li {
+    flex-basis: 47%;
+    display: flex;
+    align-items: center;
+  }
+  span {
+    padding-left: 28px;
+    &::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      border-radius: 4px;
+    }
+  }
+  .Selected,
+  .Pending,
+  .Rejected {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .Selected {
+    &::before {
+      background-color: $color-green-0;
+    }
+  }
+  .Pending {
+    &::before {
+      background-color: $color-blue-0;
+    }
+  }
+  .Rejected {
+    &::before {
+      background-color: $color-black-2;
+    }
+  }
+  .LabelNumber {
+    @include font-bold-16($line-height: 23px);
+    color: $color-green-1;
+    min-width: 16px;
+  }
+  .LabelName {
+    @include font-medium-14($line-height: 22px);
+    color: $color-blue-2;
+    white-space: nowrap;
+  }
+}
+
+.TotalCandidates {
+  font-weight: 500 !important;
+  font-size: 16px !important;
+  line-height: 18px !important;
+  color: $color-blue-2 !important;
+}

@@ -1,0 +1,19 @@
+image: node:alpine
+pipelines:
+  branches:
+    ui-development:
+      - step:
+          name: build
+          deployment: development
+          runs-on:
+            - self.hosted
+            - linux
+            - development
+          script:
+            - apk add --no-cache rsync openssh
+            - npm install
+            - CI=false npm run build
+            - mkdir deploy
+            - cp -a .next package.json public next.config.js Dockerfile deploy/
+            # - rsync -arz --delete $BITBUCKET_CLONE_DIR/deploy/ deploy@$SERVER_IP:quick-recruit-uid
+            - ssh deploy@$SERVER_IP "config/uid.deploy"

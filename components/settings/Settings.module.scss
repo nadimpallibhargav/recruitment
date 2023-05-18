@@ -1,0 +1,322 @@
+@import "styles/variables.scss";
+
+.settings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2vh;
+  gap: 24px;
+}
+// Settings Sidebar CSS Start
+.sidebarContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px 16px;
+  width: 20%;
+  height: fit-content;
+  background: $color-white-0;
+  border-radius: 8px;
+}
+
+.sidebarLink {
+  @include font-medium-14($line-height: 24px);
+  font-style: normal;
+  color: $color-blue-2;
+}
+.card {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px 12px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.cardActive {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  gap: 10px;
+  background: $color-green-5;
+  border-radius: 8px;
+  cursor: pointer;
+  p {
+    color: $color-green-6;
+  }
+  .sideIcons {
+    color: $color-green-6;
+  }
+}
+
+.sideIcons {
+  height: 16px !important;
+  width: 16px !important;
+  border-radius: 0px;
+  font-size: 16px;
+  color: $color-blue-2;
+}
+.sidebarTitle {
+  margin-bottom: 10px;
+  @include font-semibold-14($line-height: 18px);
+  font-style: normal;
+  color: $color-green-2;
+  display: block;
+}
+@media (max-width: 1024px) {
+  .sidebarLink {
+    @include font-medium-14($line-height: 24px);
+    font-size: 12px;
+    color: $color-blue-2;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 850px) {
+  .settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 0vh;
+  }
+  .sidebarContainer {
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+    width: 100%;
+    height: fit-content;
+    overflow-x: scroll;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    margin-top: 5vh;
+  }
+  .sidebarTitle {
+    display: none;
+  }
+  .card {
+    white-space: nowrap;
+  }
+  .cardActive {
+    white-space: nowrap;
+  }
+}
+
+// Settings Sidebar CSS End
+
+// All 3 tab's  Css Starts
+.tabContainer {
+  width: 80%;
+}
+
+.detailsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px 24px;
+  gap: 4px;
+  background: $color-white-0;
+  border-radius: 8px;
+}
+.cardHead {
+  width: 100%;
+  display: flex;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding-bottom: 24px;
+}
+.editIcon {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  padding: 6px 12px;
+  border: 1px solid $color-green-5;
+  border-radius: 8px;
+  font-size: 16px;
+  color: $color-green-2;
+}
+
+.label {
+  @include font-medium-14($line-height: 19px);
+  font-style: normal;
+  line-height: 19px;
+  color: $color-green-2;
+  a {
+    color: $color-blue-0;
+  }
+}
+
+.row {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 23px;
+  gap: 10px;
+}
+.singleLine {
+  margin-bottom: 24px;
+  padding-top: 4px;
+  border-bottom: 1px solid $color-green-5;
+}
+.column {
+  width: 49% !important;
+  display: flex;
+  flex-direction: column;
+  gap: 8px !important;
+}
+.input {
+  background: $color-white-1 !important;
+  border: 1px solid transparent !important;
+  :hover {
+    background: $color-white-1 !important;
+    border: 1px solid transparent !important;
+  }
+}
+.buttonRow {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+}
+@media (max-width: 850px) {
+  .tabContainer {
+    width: 100%;
+    margin: auto;
+  }
+  .column {
+    width: 100% !important;
+  }
+  .buttonRow {
+    justify-content: space-around;
+    align-items: center;
+  }
+  .editIcon {
+    margin-right: 0px;
+  }
+  .buttonRow {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    button {
+      width: 100%;
+    }
+  }
+}
+// All 3 tab's  Css Ends
+
+// Notification tab CSS Start
+
+.notificationHead {
+  width: 100%;
+  display: flex;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+.notificationline {
+  width: 100%;
+  display: flex;
+  justify-content: space-between !important;
+  align-items: center !important;
+  border-bottom: 1px solid $color-white-1;
+}
+.headColumn {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.detailsColumn {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.selectColumn {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+.notificationLabel {
+  @include font-medium-14($line-height: 19px);
+  font-style: normal;
+  color: $color-green-2;
+  padding-left: 24px;
+}
+// Notification tab CSS End
+
+//
+.CloseVacancyModal {
+  width: 450px !important;
+  max-width: 100%;
+}
+.CloseVacancyline {
+  width: 100%;
+  display: flex;
+  align-items: center !important;
+  border-bottom: 1px solid $color-white-1;
+}
+.CloseVacancyDetails {
+  width: 100%;
+  display: flex;
+  align-items: center !important;
+}
+.CloseVacancySelectColumn {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+}
+.CloseVacancyDetailsColumn {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  p {
+    @include font-semibold-14($line-height: 18px);
+    font-style: normal;
+    color: $color-green-1;
+  }
+  span {
+    @include font-medium-12($line-height: 18px);
+    font-style: normal;
+    color: $color-black-2;
+  }
+}
+.CloseVacancyDetailssubTitle {
+  margin-top: 10px;
+  width: 85%;
+  @include font-regular-14($line-height: 18px);
+  font-style: normal;
+  color: $color-black-2;
+}
+.CloseVacancyDetailsLabel {
+  @include font-medium-14($line-height: 19px);
+  font-style: normal;
+  color: $color-green-2;
+}
+.CloseVacancyDetailsTableHead {
+  //styleName: H4;
+  @include font-semibold-14($line-height: 18px);
+  font-style: normal;
+  color: $color-green-2;
+}
+
+.tableHeadBackground {
+  border-radius: 4px;
+  background: $color-white-1;
+}

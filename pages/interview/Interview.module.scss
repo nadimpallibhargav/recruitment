@@ -1,0 +1,163 @@
+@import "../../styles/variables.scss";
+
+.InterviewSection {
+  background: #121826;
+  padding-top: 65px;
+  padding-bottom: 13px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.joinedPeoplesWrapper {
+  display: flex;
+  padding-bottom: 16px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.CandidateName {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: $color-white-0;
+  margin-bottom: 16px;
+}
+.joinedPerson {
+  padding: 159px 10px 10px;
+  align-self: center;
+  min-width: 49%;
+  [class*="PersonIconWrapper"] {
+    padding-bottom: 109px;
+  }
+}
+.joinedPerson:first-child:nth-last-child(1) {
+  flex-grow: 1;
+}
+
+.startScreeningWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.AudioIconBorder {
+  cursor: pointer;
+  border: 1px solid #d9ebe7;
+  color: #d9ebe7;
+  &:hover {
+    border: 1px solid #d9ebe7;
+    background: $color-blue-3;
+  }
+}
+
+.AudioIconMute {
+  background: $color-red-0;
+  color: $color-white-0;
+}
+
+.loadingErrorWrapper {
+  text-align: center;
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  li {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #919bac;
+  }
+  .loadingIconActive {
+    background-color: #089b78;
+  }
+  h1 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    color: $color-white-0;
+  }
+}
+
+.InterviewScreeningWrapper {
+  min-height: calc(100vh - 78px);
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.questions {
+  flex-basis: 19%;
+}
+.feedback {
+  flex-basis: 19%;
+}
+
+.screeningWrapper {
+  flex-grow: 1;
+  align-self: center;
+}
+
+.endCallModal {
+  width: 455px !important;
+
+  [class="ant-modal-content"] {
+    background: $color-blue-3;
+    padding: 24px;
+  }
+  [class*="greenBtnOutline"] {
+    background: transparent;
+  }
+  [class="ant-modal-footer"] {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 40px;
+    button {
+      flex-grow: 1;
+      margin: 0 !important;
+    }
+  }
+  h2 {
+    @include font-semibold-20($line-height: 30px);
+    color: $color-white-0;
+  }
+}
+@media (max-width: 991px) {
+  .InterviewScreeningWrapper {
+    flex-direction: column;
+  }
+  .screeningWrapper {
+    width: 100%;
+  }
+}
+
+@media (max-width: 769px) {
+  .InterviewSection {
+    padding-top: 76px;
+  }
+  .joinedPeoplesWrapper {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .joinedPerson {
+    width: 100%;
+    padding: 30px 10px 10px;
+    [class*="PersonIconWrapper"] {
+      padding-bottom: 30px;
+    }
+  }
+  .endCallModal {
+    [class="ant-modal-footer"] {
+      flex-direction: column;
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

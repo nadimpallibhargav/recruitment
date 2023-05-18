@@ -1,0 +1,99 @@
+@import "../../../styles/variables.scss";
+
+.PersonWrapper {
+  background: #121826;
+  border: 1px solid #414a5a;
+  border-radius: 8px;
+  position: relative;
+  align-self: auto;
+  &:hover {
+    .PersonAudioWrapper {
+      background: $color-blue-3;
+    }
+    .MinusIcon {
+      display: inline-flex;
+    }
+  }
+}
+.VideoImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  span {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 8px;
+  }
+  img {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.PersonIconWrapper {
+  text-align: center;
+  position: relative;
+}
+.PersonIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  background: $color-white-0;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  color: #121826;
+  border-radius: 50%;
+}
+.PersonInfoWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 40px;
+}
+
+.JoinedName {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  color: #919bac;
+}
+
+.PersonAudioWrapper {
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+}
+.AudioIcon {
+  font-size: 16px;
+  color: #d9ebe7;
+  cursor: pointer;
+  border-radius: 50%;
+  &:hover {
+    background: #121826;
+  }
+}
+.MinusIcon {
+  display: none;
+}
+
+.PersonVideoWrapper {
+  .PersonIconWrapper {
+    opacity: 0;
+  }
+  .JoinedName {
+    color: $color-white-0;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  }
+}

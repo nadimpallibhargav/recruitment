@@ -1,0 +1,43 @@
+@import "../../../styles/variables.scss";
+
+.accordionWrapper {
+  color: #919bac;
+  [class*="ant-collapse-header"] {
+    padding: 0 !important;
+  }
+  [class*="ant-collapse-arrow"] {
+    svg {
+      color: $color-white-0;
+      transform: rotate(90deg);
+    }
+  }
+  [aria-expanded="true"] {
+    [class*="ant-collapse-arrow"] {
+      svg {
+        transform: rotate(270deg) !important;
+      }
+    }
+  }
+  [class*="ant-collapse-content-box"] {
+    padding-bottom: 16px !important;
+  }
+}
+.accordionItem {
+  li {
+    color: $color-white-0;
+    list-style-type: auto;
+    @include font-medium-14($line-height: 22px);
+  }
+}
+
+.accordionTitle {
+  h3 {
+    color: #919bac;
+    @include font-semibold-12($line-height: 24px);
+  }
+  h4 {
+    @include font-medium-14($line-height: 22px);
+    padding-top: 4px;
+    color: $color-white-0;
+  }
+}

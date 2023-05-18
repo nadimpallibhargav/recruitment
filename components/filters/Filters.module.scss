@@ -1,0 +1,41 @@
+@import "../../styles/variables.scss";
+
+.FilterContainer {
+  padding: 24px 16px !important;
+  flex-basis: 19%;
+  background: $color-white-0;
+  border-radius: 8px;
+}
+
+.FilterWrapper {
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  label {
+    span {
+      font-weight: 500;
+      font-size: 1.4rem;
+      line-height: 22px;
+      color: $color-blue-2;
+    }
+  }
+}
+
+.CheckboxGroup {
+  flex-direction: column;
+  gap: 16px;
+  [class*="ant-checkbox-group-item"] {
+    margin: 0;
+  }
+}
+
+.FilterHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ViewAllLink {
+  @include font-semibold-14($line-height: 18px);
+  color: $color-blue-0;
+}

@@ -1,0 +1,56 @@
+@import "../../styles/variables.scss";
+.NotesWrapper {
+  margin-bottom: 24px;
+  .NoteTime {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
+  h3 {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $color-blue-2;
+  }
+  .NoteModifyBtn {
+    border: 1px solid $color-green-5;
+    svg {
+      color: $color-blue-2;
+    }
+    &:hover {
+      border: 1px solid $color-green-0;
+    }
+  }
+  .NoteDetails {
+    padding: 8px 12px;
+    background: $color-green-5;
+    border-radius: 4px;
+  }
+  p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    color: $color-green-2;
+  }
+}
+.cancleandcheckbtn {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+  gap: 8px;
+}
+.HeadingIcon {
+  border: 1px solid grey;
+  border: 1px solid $color-green-5;
+}
+.CloseIcon {
+  svg {
+    color: $color-red-0;
+  }
+}
+.OkIcon {
+  svg {
+    color: $color-green-0;
+  }
+}

@@ -1,0 +1,30 @@
+@import "../../styles/variables.scss";
+
+.EmptyTextWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  align-items: center;
+  h2 {
+    @include font-semibold-18($line-height: 18px);
+    color: $color-green-1;
+  }
+  h3 {
+    @include font-regular-14($line-height: 24px);
+    color: $color-blue-2;
+    max-width: 393px;
+    margin: auto;
+  }
+}
+.fileIcon {
+  font-size: 48px;
+  color: #95c7bb;
+  width: 128px;
+  height: 128px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $color-white-1;
+  border-radius: 50%;
+}

@@ -1,0 +1,53 @@
+@import "../../../styles/variables.scss";
+
+.videoWrapper {
+  width: 592px;
+  min-height: 395px;
+  position: relative;
+  border: 1.32481px solid #414a5a;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .VideoImage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  h2 {
+    @include font-semibold-16($line-height: 23px);
+    color: $color-white-0;
+  }
+}
+
+.PlayBtnWrapper {
+  position: absolute;
+  left: 0;
+  bottom: 25px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.AudioIconMute {
+  background: $color-blue-3;
+  cursor: pointer;
+  border: 1px solid #414a5a;
+  &:hover {
+    border: 1px solid #414a5a;
+    background: $color-blue-3;
+  }
+  svg {
+    color: $color-white-0;
+  }
+}
+
+@media (max-width: 768px) {
+  .videoWrapper {
+    min-height: 198px;
+    width: 100%;
+  }
+}

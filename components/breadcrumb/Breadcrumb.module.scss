@@ -1,0 +1,32 @@
+@import "styles/variables.scss";
+
+.Breadcrumb {
+  margin-bottom: 11px;
+  ol {
+    display: flex;
+  }
+  a {
+    margin: 0;
+    height: initial;
+    color: $color-blue-0;
+    padding: 0;
+    background-color: unset !important;
+    border-radius: 0;
+    border-bottom: 1px solid transparent;
+    &:hover {
+      border-bottom: 1px solid $color-blue-0;
+      color: $color-blue-0;
+    }
+  }
+  li {
+    color: $color-green-2 !important;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  @media (max-width: 768px) {
+    li {
+      font-size: 10px;
+    }
+  }
+}

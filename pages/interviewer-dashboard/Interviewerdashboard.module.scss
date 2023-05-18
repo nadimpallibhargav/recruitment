@@ -1,0 +1,54 @@
+@import "../../styles/variables.scss";
+
+.InterviewerDashboardSection {
+  padding-top: 12px;
+}
+
+.InterviewsWrapper {
+  background: $color-white-0;
+  border-radius: 8px;
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+
+.InterviewsHeading {
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h2 {
+    @include font-semibold-18($line-height: 18px);
+    color: $color-green-1;
+  }
+}
+
+.ViewBtn {
+  @include font-semibold-14($line-height: 18px);
+  color: $color-green-0;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  h2 {
+    @include font-semibold-18($line-height: 18px);
+    color: $color-green-1;
+  }
+  svg {
+    font-size: 11px;
+  }
+}
+
+.vacancyColumn {
+  width: 25% !important;
+  span {
+    display: inline-block;
+    padding-top: 4px;
+    color: $color-blue-2;
+  }
+}
+
+.DetailsWrapper {
+  [class*="ant-pagination"] {
+    display: none;
+  }
+}

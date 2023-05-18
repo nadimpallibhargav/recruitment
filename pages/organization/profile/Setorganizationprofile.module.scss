@@ -1,0 +1,76 @@
+@import "styles/variables.scss";
+
+.SetOrganizationSection {
+  padding: 30px 0 30px;
+  .form {
+    padding: 30px;
+    label {
+      align-items: center;
+    }
+  }
+  .SetOrganizationFormWrapper {
+    width: 784px;
+  }
+  button {
+    width: 210px;
+  }
+  .inputGroup {
+    margin-bottom: 30px;
+    justify-content: space-between;
+  }
+  .LocationInputGroup {
+    margin-bottom: 0;
+  }
+  .AddLocationBtn {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    color: $color-blue-0;
+    [class*="anticon-plus"] {
+      margin-right: 8px;
+    }
+  }
+  .buttons {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding-top: 16px;
+    button {
+      margin: 0;
+    }
+  }
+  .SkipBtn {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    color: $color-blue-0;
+  }
+  [class*="anticon anticon-down ant-select-suffix"] {
+    svg {
+      color: $color-blue-2;
+    }
+  }
+  .LocationTwo {
+    margin-top: 40px;
+  }
+  .LocationLabelWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    label {
+      margin-bottom: 0;
+    }
+  }
+  .RemoveBtn {
+    @include font-semibold-14($line-height: 18px);
+    color: $color-red-0;
+    display: flex;
+    gap: 7px;
+  }
+  @media (max-width: 768px) {
+    button {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,188 @@
+@import "styles/variables.scss";
+
+.job {
+  background: $color-white-0;
+  border-top: 2px solid $color-green-0;
+  border-radius: 4px;
+  padding: 24px 16px 16px;
+  &Role {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3px;
+  }
+  &RoleName {
+    h3 {
+      @include font-medium-14($line-height: 18px);
+      color: $color-green-2;
+    }
+  }
+  h4 {
+    @include font-semibold-16;
+    color: $color-green-1;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    .skills {
+      white-space: nowrap;
+      max-width: 60%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: inline-block;
+      padding-right: 6px;
+    }
+    span {
+      &:last-child {
+        margin-left: 6px;
+      }
+    }
+  }
+  &TotalOpen {
+    span {
+      display: inline-block;
+      @include font-medium-14($line-height: 18px);
+      color: $color-blue-0;
+      padding: 5px 10px;
+      background: rgba(77, 112, 255, 0.1);
+      border-radius: 44px;
+      white-space: nowrap;
+    }
+  }
+  &Candidates {
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    background: $color-white-1;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  &CandidatesDetails {
+    flex-basis: 33.3%;
+    padding-inline: 3px;
+    flex-shrink: 0;
+    &:not(:last-child) {
+      border-right: 1px solid $color-white-2;
+    }
+    h5 {
+      @include font-medium-14($line-height: 18px);
+      color: $color-blue-2;
+      margin-bottom: 12px;
+    }
+    span {
+      @include font-semibold-20;
+      color: $color-green-1;
+    }
+  }
+  &CandidatesDraft {
+    justify-content: center;
+  }
+  &Rounds {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+    span {
+      @include font-medium-14($line-height: 18px);
+      color: $color-green-2;
+      padding: 5px 10px;
+      background: $color-green-5;
+      border-radius: 4px;
+    }
+  }
+  &Date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    border-top: 1px solid $color-green-5;
+    padding-top: 8px;
+    span {
+      @include font-medium-12;
+      color: $color-blue-2;
+      margin-bottom: 2px;
+    }
+    h6 {
+      @include font-medium-14($line-height: 18px);
+      color: $color-green-2;
+    }
+  }
+  &Time {
+    align-self: start;
+  }
+  &PocProfiles {
+    display: flex;
+    align-items: center;
+    label {
+      background: $color-green-5;
+      border: 2px solid $color-white-0;
+      padding: 4px 8px 5px 8px !important;
+      width: 24px;
+      height: 24px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      @include font-regular-12($line-height: 15px);
+      color: $color-blue-2;
+      border-radius: 50%;
+      &:not(:first-child) {
+        margin-left: -5px;
+      }
+    }
+  }
+  &Interviewer {
+    flex-grow: 1;
+    align-self: start;
+  }
+  &Link {
+    a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      @include font-semibold-14($line-height: 18px);
+      color: $color-green-0;
+      &:hover {
+        color: $color-green-6;
+      }
+    }
+  }
+  @media (max-width: 1280px) {
+    flex-basis: 49%;
+  }
+  @media (max-width: 991px) {
+    &Role {
+      gap: 10px;
+    }
+  }
+  @media (max-width: 768px) {
+    flex-basis: 100%;
+    &Role {
+      flex-direction: initial;
+      gap: 10px;
+    }
+    &RoleName {
+      h3 {
+        font-size: 12px;
+      }
+    }
+    h4 {
+      font-size: 14px;
+    }
+    &TotalOpen {
+      span {
+        font-size: 12px;
+      }
+    }
+    &CandidatesDetails {
+      h5 {
+        min-height: 36px;
+        font-size: 12px;
+      }
+    }
+  }
+  @media (max-width: 375px) {
+    &Date {
+      flex-wrap: wrap;
+    }
+  }
+}

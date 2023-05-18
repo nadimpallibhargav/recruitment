@@ -1,0 +1,8 @@
+@import 'styles/variables.scss';
+
+.DateSelect {
+    display: flex;
+    &:hover {
+        border-color: $color-green-0 !important;
+    }
+}

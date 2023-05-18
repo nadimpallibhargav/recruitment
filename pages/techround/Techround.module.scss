@@ -1,0 +1,35 @@
+@import "../../styles/variables.scss";
+
+.TechroundCandidateSection {
+}
+
+.JoinWrapper {
+  padding: 30px 0;
+  min-height: 100vh;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  h3 {
+    margin-top: 32px;
+    margin-bottom: 8px;
+    @include font-medium-12($line-height: 18px);
+    color: #d9ebe7;
+  }
+  h4 {
+    @include font-semibold-18($line-height: 18px);
+    color: $color-white-0;
+    padding-bottom: 24px;
+  }
+}
+.LogoWrapper {
+  margin-bottom: 40px;
+}
+
+.JoinBtn {
+  button {
+    width: 300px;
+    max-width: 100%;
+  }
+}

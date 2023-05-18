@@ -1,0 +1,41 @@
+@import "styles/variables.scss";
+
+.forgotpasswordSection {
+  padding: 183px 0 50px;
+  .formWrapper {
+    width: 520px;
+    max-width: 100%;
+    margin: auto;
+    h2 {
+      line-height: 28px;
+      span {
+        color: $color-green-1;
+        display: block;
+      }
+    }
+  }
+  .formHeading {
+    margin-bottom: 24px;
+  }
+  a {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: $color-blue-0;
+  }
+  @media (max-width: 768px) {
+    padding: 50px 0 50px;
+  }
+}
+
+.sentMessageWrapper {
+  min-height: 18px;
+}
+
+.sentmessage {
+  color: $color-green-0;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  display: inline-block;
+}

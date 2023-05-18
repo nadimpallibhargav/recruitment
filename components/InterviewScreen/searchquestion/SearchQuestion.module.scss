@@ -1,0 +1,27 @@
+@import "../../../styles/variables.scss";
+
+.QuestionSearch {
+  width: 100%;
+  background: #121826;
+  border-radius: 8px;
+  input {
+    height: 40px !important;
+    font-weight: 500;
+    font-size: 14px;
+    color: $color-white-0 !important;
+  }
+  [class="ant-select-selector"] {
+    border-radius: 8px;
+    background-color: #121826 !important;
+    border: none !important;
+    padding: 10px 18px !important;
+    height: 40px !important;
+    box-shadow: none !important;
+  }
+  [class="ant-select-selection-placeholder"] {
+    font-weight: 500;
+    font-size: 14px;
+    color: #485164;
+    gap: 10px;
+  }
+}

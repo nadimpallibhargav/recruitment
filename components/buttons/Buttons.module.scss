@@ -1,0 +1,147 @@
+@import "styles/variables.scss";
+
+.addJobsBtn {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  &:hover {
+    background: $color-green-6;
+  }
+  @media (max-width: 375px) {
+    flex-basis: 45%;
+    padding: 10px 6px;
+    font-size: 12px !important;
+    gap: 5px;
+  }
+}
+
+.formSubmit {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 21px 12px;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  color: $color-white-0;
+  height: 44px;
+  .formSubmitText {
+    position: relative;
+  }
+  [class*="ant-spin ant-spin-spinning css-dev-only-do-not-override-acm2ia"] {
+    position: absolute;
+    right: -26px;
+  }
+}
+
+.searchWrapper {
+  width: 100%;
+  &.active {
+    position: fixed;
+  }
+}
+
+.SearchIcon {
+  font-size: 16px;
+  color: $color-blue-2;
+  vertical-align: text-top;
+  svg {
+    font-size: 20px;
+    color: $color-blue-2;
+  }
+}
+
+.search {
+  width: 100%;
+  [class*="ant-input-group"] {
+    display: flex;
+    border: 1px solid $color-white-2;
+    border-radius: 10px;
+    flex-direction: row-reverse;
+    [class*="ant-input-group-addon"] {
+      inset-inline-start: initial !important;
+      flex-basis: 11%;
+      outline: none !important;
+      box-shadow: none !important;
+      border: none !important;
+      button {
+        border: none !important;
+        border-color: $color-white-0 !important;
+        background: $color-white-0 !important;
+        height: 40px !important;
+        color: $color-blue-2 !important;
+        width: 100%;
+        text-align: center !important;
+        outline: none !important;
+        box-shadow: none !important;
+        border-radius: 8px 0px 0px 8px !important;
+        z-index: 0;
+        --antd-wave-shadow-color: none !important;
+        .anticon-search svg {
+          color: $color-blue-2 !important;
+        }
+      }
+    }
+    input {
+      flex-basis: 89%;
+      border: none !important;
+      border-radius: 0px 8px 8px 0px !important;
+    }
+  }
+  input {
+    border: none !important;
+    border-radius: 8px !important;
+    &::placeholder {
+      @include font-medium-14($line-height: 20px);
+      color: $color-blue-2;
+    }
+  }
+  @media (max-width: 578px) {
+    display: none;
+  }
+}
+
+.vacancyFilter {
+  // width: 225px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  [class*="ant-select-selector"] {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    text-align: left !important;
+    background: none !important;
+    border: none !important;
+    outline: 0 !important;
+    align-items: center;
+    padding-left: 0 !important;
+  }
+  [class*="ant-select-arrow"] {
+    width: 5% !important;
+    inset-inline-end: 14px !important;
+    // left: 188px !important;
+    @media (max-width: 375px) {
+      // left: 152px !important;
+    }
+  }
+  [class*="ant-select-selection-item"] {
+    font-size: 20px !important;
+    line-height: initial !important;
+    color: $color-green-1 !important;
+    font-weight: 600 !important;
+    flex: initial !important;
+    white-space: initial !important;
+    @media (max-width: 375px) {
+      font-size: 16px !important;
+    }
+  }
+  [class*="ant-select-selection-search"] {
+    left: 0 !important;
+    display: none !important;
+  }
+}

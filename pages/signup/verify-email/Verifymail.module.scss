@@ -1,0 +1,41 @@
+@import "styles/variables.scss";
+
+.verifymailSection {
+  .SignupVerifyMailHeading {
+    margin-bottom: 0;
+  }
+  .sentMessageWrapper {
+    line-height: 0;
+  }
+  .formWrapper {
+    width: 467px;
+    .mail {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+  .resendMailLink {
+    margin-top: 24px;
+    display: inline-block;
+  }
+  .resendFormBtn {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    height: initial !important;
+    div {
+      display: none;
+    }
+    span {
+      font-weight: 600 !important;
+      font-size: 14px !important;
+      line-height: 18px !important;
+      color: $color-blue-0 !important;
+    }
+  }
+  .inputWrapper {
+    margin-top: 8px;
+  }
+}

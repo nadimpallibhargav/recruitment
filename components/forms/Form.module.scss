@@ -1,0 +1,69 @@
+@import "styles/variables.scss";
+
+.form {
+  background: $color-white-0;
+  box-shadow: 0px 2px 2px rgba(9, 180, 139, 0.1);
+  border-radius: 8px;
+  padding: 40px;
+  h1 {
+    @include font-bold-26;
+    color: $color-green-1;
+    margin-bottom: 8px;
+  }
+  h2 {
+    @include font-medium-14;
+    color: $color-blue-2;
+  }
+  .formHeading {
+    margin-bottom: 40px;
+  }
+  label {
+    @include font-medium-14;
+    color: $color-green-2;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    a {
+      color: $color-blue-0;
+      font-weight: 600;
+    }
+  }
+  @media (max-width: 768px) {
+    padding: 20px 15px;
+  }
+}
+
+.formMainErrorWrapper {
+  position: relative;
+  .formMainError {
+    position: absolute;
+    bottom: -30px;
+  }
+}
+
+.inputGroup {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  .inputWrapper {
+    flex-basis: 48%;
+  }
+  @media (max-width: 768px) {
+    .inputWrapper {
+      flex-basis: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .form {
+    .formHeading {
+      margin-bottom: 24px;
+    }
+  }
+  .formMainErrorWrapper {
+    .formMainError {
+      bottom: -23px;
+    }
+  }
+}

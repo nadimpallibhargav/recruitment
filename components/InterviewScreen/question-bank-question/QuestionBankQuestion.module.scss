@@ -1,0 +1,28 @@
+@import "../../../styles/variables.scss";
+
+.questionWrapper {
+  max-height: 200px;
+  overflow-y: scroll;
+  ol {
+    padding-left: 16px;
+  }
+  li {
+    color: $color-white-0;
+    list-style-type: auto;
+    @include font-medium-14($line-height: 22px);
+  }
+  h3 {
+    padding-bottom: 8px;
+    color: #919bac;
+    @include font-semibold-14($line-height: 24px);
+  }
+  h4 {
+    padding: 0 0 14px 0px;
+    color: $color-white-0;
+    @include font-medium-14($line-height: 22px);
+  }
+}
+
+.TextAreaInput {
+  color: $color-white-0;
+}

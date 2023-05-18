@@ -1,0 +1,14 @@
+@import "styles/variables.scss";
+
+.formButtons {
+  margin-top: 16px;
+}
+
+@media (min-width: 991px) {
+  .CandidatesWrapper {
+    .CandidatesList,
+    .CandidatesResume {
+      height: 67vh;
+    }
+  }
+}

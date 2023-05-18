@@ -1,0 +1,122 @@
+@import "../../../styles/variables.scss";
+
+.FeedbackWrapper {
+  background: $color-blue-3;
+  border-radius: 8px;
+  padding: 16px;
+  h2 {
+    @include font-semibold-14($line-height: 24px);
+    color: #919bac;
+    padding-bottom: 8px;
+  }
+}
+
+.InputWrapper {
+  label {
+    display: inline-block;
+    padding-bottom: 6px;
+    @include font-semibold-14($line-height: 24px);
+    color: $color-white-0;
+  }
+  [class="ant-radio"],
+  [class*="ant-radio-checked"] {
+    display: none;
+  }
+
+  .RadioBtn {
+    display: inline-flex;
+    justify-content: center !important;
+    width: 72px;
+    padding: 0;
+    flex-basis: unset !important;
+    height: 28px;
+    background: #414a5a;
+    border-radius: 4px;
+    border: 1px solid transparent !important;
+    &:hover {
+      border: 1px solid #919bac !important;
+    }
+    span {
+      @include font-regular-12($line-height: 28px);
+      color: $color-white-0;
+    }
+  }
+  [class*="ant-radio-wrapper-checked"] {
+    background: $color-green-0 !important;
+    color: $color-white-0;
+    &:hover {
+      border: 1px solid transparent !important;
+    }
+  }
+}
+
+.SelectedWrapper {
+  padding-bottom: 35px;
+  .SelectedRadioBtn {
+    color: $color-white-0;
+    @include font-semibold-14($line-height: 18px);
+    margin-inline-end: 12px;
+  }
+  [class="ant-radio-inner"] {
+    background: transparent;
+  }
+  [class*="ant-radio-wrapper-checked"] {
+    [class="ant-radio-inner"] {
+      border-color: $color-green-0;
+      background-color: $color-green-0;
+    }
+  }
+}
+
+.TextWrapper {
+  label {
+    @include font-medium-14($line-height: 19px);
+    color: $color-white-0;
+    display: inline-block;
+    padding-bottom: 6px;
+  }
+}
+
+.TextAreaInput {
+  background: #121826;
+  border: 1px solid transparent;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 4px;
+  padding: 10px 14px;
+  @include font-regular-14($line-height: 24px);
+  color: #919bac;
+  &:focus {
+    border: 1px solid #414a5a !important;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  }
+  &:hover {
+    border: 1px solid #414a5a !important;
+  }
+  &::placeholder {
+    color: #485164 !important;
+    @include font-regular-14($line-height: 24px);
+  }
+}
+
+.feedbackOptions {
+  gap: 10px;
+}
+
+@media (max-width: 1200px) {
+  .feedbackOptions {
+    gap: 5px;
+  }
+  .InputWrapper {
+    .RadioBtn {
+      width: 50px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .InputWrapper {
+    .RadioBtn {
+      width: 45px;
+    }
+  }
+}

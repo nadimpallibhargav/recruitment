@@ -1,0 +1,540 @@
+@import "styles/variables.scss";
+
+.MapCandidates {
+  .MapContent {
+    width: 100% !important;
+    position: relative;
+  }
+}
+.BreadCrumbWrapper {
+  margin-bottom: 8px;
+}
+.mobileResume {
+  display: none;
+  padding-bottom: 16px;
+}
+.Loader {
+  background: $color-white-0;
+  border-radius: 8px;
+  padding: 112px 10px;
+  text-align: center;
+}
+
+.CandidatesWrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.CandidatesList {
+  flex-basis: 50%;
+}
+.CandidatesResume {
+  flex-basis: 50%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  iframe {
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.desktop {
+  display: inherit;
+  @media (max-width: 992px) {
+    display: none;
+    iframe {
+      height: 300px;
+    }
+  }
+}
+
+.mobile {
+  display: inherit;
+  @media (min-width: 993px) {
+    display: none;
+  }
+}
+
+.CandidatesContent {
+  background-color: $color-white-0;
+  border-radius: 8px;
+  padding: 24px 36px 24px;
+}
+
+.CandidatesTotal {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+  .Filter {
+    width: 602px;
+    max-width: 100%;
+  }
+  h2 {
+    @include font-semibold-18($line-height: 18px);
+    color: $color-green-1;
+  }
+  .DateSelect {
+    margin-inline: 16px;
+    height: 36px;
+    max-width: 234px;
+  }
+  .text {
+    @include font-medium-14($line-height: 19px);
+    color: $color-green-2;
+  }
+  .SortBtn {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    border: 1px solid $color-white-2 !important;
+    color: $color-green-2 !important;
+    vertical-align: top;
+    height: 36px;
+    padding: 8px 12px;
+    min-width: 123px;
+  }
+}
+.addNumber {
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 64px;
+  padding: 5px 6px !important;
+  [class*="anticon-plus"] {
+    font-size: 9px;
+  }
+}
+.tag {
+  border: none;
+  margin: 0;
+  background: $color-green-5;
+  @include font-medium-14($line-height: 18px);
+  color: $color-green-1;
+  padding: 5px 14px 5px 10px;
+  input {
+    height: 28px !important;
+    @include font-medium-14($line-height: 18px);
+    padding: 5px 10px !important;
+    max-width: 80px;
+  }
+}
+
+.CandidateActive {
+  position: relative;
+  margin-bottom: 16px;
+  border: 1px solid $color-green-5;
+  border-radius: 4px;
+  padding: 16px;
+  .Contact {
+    ul {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+      li {
+        @include font-medium-14($line-height: 22px);
+        color: $color-green-2;
+      }
+    }
+    .ContactIcon {
+      margin-right: 4px;
+    }
+    .PhoneIcon {
+      transform: rotate(90deg);
+    }
+    .CandidateSelectAnchor {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .CandidateSelectLink {
+      opacity: 0;
+      @include font-semibold-14($line-height: 18px);
+      color: $color-blue-0;
+      margin-left: auto;
+
+      svg {
+        font-size: 12px;
+      }
+      .CandidateSelectText {
+        border-bottom: 1px solid transparent;
+        &:hover {
+          border-bottom: 1px solid $color-blue-0;
+        }
+      }
+    }
+  }
+  .FormArrow {
+    opacity: 0;
+  }
+  &:hover {
+    background: $color-white-1;
+    .EditIcon {
+      opacity: 1;
+    }
+    .CandidateSelectLink {
+      opacity: 1;
+    }
+  }
+  .FormArrow {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .modify {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+  }
+  .EditIcon {
+    cursor: pointer;
+    background: $color-white-0;
+    padding: 6px;
+    color: $color-blue-2;
+    font-size: 14px;
+    border: 1px solid $color-green-5;
+    border-radius: 8px;
+    opacity: 0;
+  }
+  .CandidateName {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+    gap: 16px;
+    [class*="ant-checkbox"] {
+      display: inline-flex !important;
+    }
+    .Name {
+      @include font-semibold-14($line-height: 18px);
+      color: $color-green-1;
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 200px;
+      text-overflow: ellipsis;
+    }
+  }
+  .DeleteIcon {
+    margin-left: auto;
+  }
+}
+
+.CardActive {
+  background: $color-white-1;
+  .FormArrow {
+    opacity: 1;
+  }
+}
+
+.formTag {
+  [class*="ant-tag-close-icon"] {
+    margin-left: 14px;
+    vertical-align: initial !important;
+  }
+}
+.FormArrow {
+  position: absolute;
+  right: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: $color-green-5;
+  font-size: 20px;
+}
+.CandidateForm {
+  margin-bottom: 16px;
+  position: relative;
+  .form {
+    background: $color-white-1;
+    border-radius: 4px;
+    padding: 16px 12px;
+    .input {
+      &::placeholder {
+        @include font-medium-14($line-height: 18px);
+        color: $color-green-2;
+      }
+    }
+  }
+  .inputGroup {
+    justify-content: space-between;
+    row-gap: 16px;
+    .inputWrapper {
+      flex-basis: 46%;
+      flex-grow: 1;
+    }
+  }
+  .formTags {
+    margin: 16px 0;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .formButtons {
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    .Icons {
+      background: $color-white-0;
+      border: 1px solid $color-green-5;
+      border-radius: 8px;
+      padding: 10px;
+    }
+    .CloseIcon {
+      color: $color-red-0;
+    }
+    .CheckIcon {
+      color: $color-green-0;
+    }
+  }
+  label {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .addIcon {
+    background: $color-green-5;
+    border-radius: 64px;
+    font-size: 9px;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.CandidatesBtn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 24px;
+  max-width: 1392px;
+  margin: auto;
+}
+
+.SelectedModal {
+  width: 590px !important;
+  max-width: 100%;
+  h2 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .SelectedCandidatesList {
+    padding-top: 24px;
+    height: 70vh;
+    overflow: scroll;
+    padding-right: 0px;
+  }
+  [class="ant-modal-footer"] {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    button {
+      height: 40px;
+      padding: 10px 16px;
+      margin: 0 !important;
+    }
+  }
+  [class="ant-modal-content"] {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .CandidatesList {
+    flex-basis: 100%;
+  }
+  .CandidatesResume {
+    margin-top: 16px;
+    min-height: 300px;
+  }
+  .CandidateActive {
+    .EditIcon {
+      opacity: 1;
+    }
+  }
+  .CandidateForm {
+    .FormArrow {
+      bottom: -25px;
+      left: 50%;
+      top: initial;
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  .CandidatesTotal {
+    .Filter {
+      text-align: left;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .CandidateForm {
+    .inputGroup {
+      .inputWrapper {
+        flex-basis: 100%;
+      }
+    }
+  }
+  .CandidateActive {
+    .modify {
+      margin-left: 0;
+    }
+    .Contact {
+      .CandidateSelectLink {
+        margin-left: initial;
+        opacity: 1;
+      }
+      ul {
+        flex-wrap: wrap;
+        gap: 12px;
+        li {
+          font-size: 1.4rem;
+        }
+      }
+    }
+    .ContactMap {
+      padding: 0;
+    }
+    .CandidateName {
+      flex-wrap: wrap;
+      gap: 16px 12px;
+      .Name {
+        flex-basis: 87%;
+        width: 230px;
+        max-width: 100%;
+      }
+    }
+  }
+  .CandidatesContent {
+    padding: 16px 12px;
+  }
+
+  .CandidatesTotal {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+    .DateSelect {
+      margin-inline: 0;
+      margin: 12px 0;
+      display: flex;
+      height: 36px;
+    }
+    .SortBtn {
+      height: 36px;
+      padding: 8px 12px;
+    }
+  }
+  .CandidatesBtn {
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+    flex-direction: column;
+    align-items: stretch;
+    button {
+      width: 100%;
+      flex-basis: 100%;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+  .CandidatesResume {
+    iframe {
+      height: 300px;
+    }
+  }
+}
+
+@media (min-width: 991px) {
+  .container {
+    position: relative;
+    height: 100%;
+  }
+  .MapCandidates {
+    height: calc(100vh - 60px);
+    padding-bottom: 0;
+    .MapContent {
+      width: 100%;
+      position: relative;
+      padding-bottom: 0;
+      height: calc(100% - 88px);
+    }
+  }
+  .CandidatesList {
+    flex-basis: 50%;
+    height: 60vh;
+    overflow-y: scroll;
+    padding-right: 20px;
+  }
+  .CandidatesResume {
+    flex-basis: 50%;
+    height: 60vh;
+    overflow: scroll;
+  }
+  .CandidatesContent {
+    background-color: $color-white-0;
+    border-radius: 8px;
+    padding: 24px 36px 24px;
+    max-height: calc(100% - 68px);
+  }
+  .CandidatesBtn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 24px;
+    position: absolute;
+    bottom: 12px;
+    width: 100%;
+    right: 0;
+    max-width: 1392px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .CandidateActive {
+    .FormArrow {
+      top: initial;
+      bottom: -15px;
+      transform: none;
+      left: 50%;
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  .mobileResume {
+    display: block;
+  }
+}
+
+.SelectIcon {
+  display: none;
+}
+.SingleCandidate {
+  max-height: 100%;
+  transition: max-height 0.5s ease-in;
+  &.close {
+    .SelectIcon {
+      display: inline-block;
+    }
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+    overflow: hidden;
+  }
+}

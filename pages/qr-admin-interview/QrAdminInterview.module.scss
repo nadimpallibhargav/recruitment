@@ -1,0 +1,26 @@
+@import "../../styles/variables.scss";
+
+@media (max-width: 1400px) {
+  .QrAdminInterviewSection {
+    .ContentWrapper {
+      gap: 6px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .QrAdminInterviewSection {
+    .ContentWrapper {
+      flex-wrap: nowrap;
+    }
+  }
+}
+
+@media (max-width: 1120px) {
+  .QrAdminInterviewSection {
+    .ContentWrapper {
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+  }
+}

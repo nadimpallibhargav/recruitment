@@ -1,0 +1,16 @@
+.manageContainer {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+@media (max-width: 930px) {
+  .manageContainer {
+    padding-inline: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .LanguageSection {
+    padding-top: 44px;
+  }
+}

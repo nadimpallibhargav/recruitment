@@ -1,0 +1,655 @@
+@import "../../styles/variables.scss";
+
+.BreadCrumbWrapper {
+  h2 {
+    display: flex;
+    align-items: center;
+    .BreadcrumbIconSeperator {
+      padding-inline: 10px;
+    }
+    .BreadcrumbIcon {
+      margin-right: 6px;
+    }
+  }
+}
+
+.BreadcrumbCallBtn {
+  height: 40px;
+  width: 86px;
+}
+.BreadcrumbMapBtn {
+  height: 40px;
+}
+.HeaderMoreBtn {
+  border: 1px solid #d0d9d6;
+  border-radius: 8px;
+  svg {
+    color: $color-blue-2;
+  }
+}
+.reportIcon,
+.AudioPlayIcon {
+  background: $color-green-5;
+  border: none;
+}
+.EditCellIcons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  .EditIcons {
+    border: 1px solid $color-green-5;
+    svg {
+      color: $color-blue-2;
+    }
+    &:hover {
+      border: 1px solid $color-green-0;
+      svg {
+        color: $color-green-0;
+      }
+    }
+  }
+}
+
+.InterviewDatePicker {
+  padding: 0;
+  [class*="anticon-calendar"] {
+    svg {
+      color: $color-green-2;
+    }
+  }
+  [class*="ant-picker-input"] {
+    input {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 22px;
+      color: $color-green-2;
+    }
+  }
+  [class*="anticon-calendar"] {
+    display: none;
+  }
+  [class*="ant-picker"] {
+    margin-inline-start: -10px !important;
+  }
+}
+
+.HrRoundDetailsSection {
+  .HrDetailsWrapper {
+    display: flex;
+    gap: 24px;
+    table {
+      padding: 0;
+      [class*="ant-table-thead"] [class*="ant-table-cell"] {
+        white-space: nowrap;
+      }
+      a {
+        white-space: nowrap;
+      }
+    }
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 18px;
+    color: $color-green-1;
+  }
+  iframe {
+    width: 100%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));
+    border-radius: 10px;
+    border: 1px solid #f2f2f2;
+    min-height: 952px;
+    max-width: 750px;
+    margin: auto;
+    vertical-align: text-top;
+  }
+  [class*="ant-table-pagination"] {
+    display: none;
+  }
+
+  .ScheduleDateWrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+    cursor: pointer;
+    .DatePicker {
+      border: none !important;
+      opacity: 0;
+      padding: 0 !important;
+      width: 16px !important;
+      height: 16px !important;
+      &:hover {
+        border: none !important;
+      }
+      [class*="anticon-calendar"] svg {
+        color: $color-green-2 !important;
+        font-size: 14px !important;
+      }
+    }
+    &:hover {
+      .DatePicker {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.HrDetailsContent {
+  flex-grow: 1;
+}
+.HrDetailsActivity {
+  background: $color-white-0;
+  border-radius: 8px;
+  padding: 24px;
+  height: fit-content;
+  width: 373px;
+}
+.HrDetailsStatus {
+  background: $color-white-0;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  padding: 24px;
+  h2 {
+    margin-bottom: 24px;
+  }
+}
+
+.InterviewStatusTable {
+  color: inherit;
+  tbody {
+    [class*="ant-table-cell"]:last-of-type {
+      padding: 16px 28px 15px !important;
+    }
+  }
+}
+.tableWrapper {
+  [class*="greenBtnOutline"] {
+    background-color: $color-green-0 !important;
+    color: $color-white-0 !important;
+  }
+}
+.FeedbackText {
+  padding-left: 21px;
+  position: relative;
+  display: inline-block;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+  }
+}
+.RejectText {
+  &::before {
+    background-color: $color-red-0;
+  }
+}
+.PendingText {
+  &::before {
+    background-color: $color-yellow-0;
+  }
+}
+.SelectText {
+  &::before {
+    background-color: $color-green-0;
+  }
+}
+.HrDetailsProfessional {
+  background: $color-white-0;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  padding: 24px;
+}
+.HrDetailsHeadingIcon {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.HeadingIcon {
+  cursor: pointer;
+  border: 1px solid $color-green-5 !important;
+  svg {
+    color: $color-blue-2 !important;
+  }
+}
+
+.HrDetailsResume {
+  background: $color-white-0;
+  border-radius: 8px;
+  padding: 32px 24px 24px;
+}
+.ResumeWrapper {
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  min-height: 300px;
+}
+.HrDetailsProfessionalDetails {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 66px;
+}
+
+.ProfessionalContent {
+  flex-basis: 25%;
+  h3 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: $color-blue-2;
+    margin-bottom: 8px;
+  }
+  p {
+    @include font-semibold-14($line-height: 18px);
+    color: $color-green-2;
+  }
+  .JoinDatePicker,
+  input {
+    height: 40px;
+    background: $color-white-0;
+    border: 1px solid $color-white-2;
+    border-radius: 4px;
+  }
+  .JoinDatePicker {
+    svg {
+      color: $color-green-2 !important;
+    }
+  }
+}
+.EditIconsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+}
+.CloseIcon {
+  svg {
+    color: $color-red-0 !important;
+  }
+}
+.OkIcon {
+  svg {
+    color: $color-green-0 !important;
+  }
+}
+.ProfessionalEditIcons {
+  display: none;
+}
+.HrDetailsProfessionalActive {
+  .EditIcon {
+    display: none;
+  }
+  .ProfessionalText {
+    display: none;
+  }
+  .EditProfessional {
+    display: block;
+    max-width: 140px;
+  }
+  .ProfessionalEditIcons {
+    display: inline-flex;
+  }
+}
+.EditProfessional {
+  display: none;
+}
+
+.TabsWrapper {
+  height: 100%;
+}
+.InterviewTabs {
+  padding: 0;
+  margin-bottom: 16px !important;
+  [role*="tablist"] {
+    padding: 0 !important;
+    margin-bottom: 16px !important;
+    background: $color-white-0;
+  }
+  [class*="ant-tabs-tab-active"] {
+    .InterviewTab {
+      color: $color-green-1;
+    }
+  }
+}
+
+.InterviewTab {
+  padding: 16px 40px !important;
+}
+.HrRoundTabs {
+  height: 100%;
+  [class="ant-tabs-content-holder"] {
+    margin-bottom: 0px;
+  }
+  [role*="tablist"] {
+    padding: 0px 0px 24px !important;
+  }
+}
+
+.HrRoundTab {
+  padding-bottom: 8px !important;
+  padding-inline: 18px;
+}
+
+.TabsContent {
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+}
+.NotesInput {
+  margin-top: auto;
+}
+.EmptyNotes {
+  min-height: 300px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $color-black-2;
+    margin: auto;
+  }
+}
+.NotesListWrapper {
+  height: 400px;
+  overflow-y: scroll;
+}
+.NotesWrapper {
+  margin-bottom: 24px;
+  .NoteTime {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
+  h3 {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: $color-blue-2;
+  }
+  .NoteModifyBtn {
+    border: 1px solid $color-green-5;
+    svg {
+      color: $color-blue-2;
+    }
+    &:hover {
+      border: 1px solid $color-green-0;
+    }
+  }
+  .NoteDetails {
+    padding: 8px 12px;
+    background: $color-green-5;
+    border-radius: 4px;
+  }
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: $color-green-2;
+  }
+}
+
+.NotesInputWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 24px;
+  background: $color-white-0;
+}
+
+.NoteInput {
+  border: 1px solid $color-white-2 !important;
+  &::placeholder {
+    color: $color-black-2 !important;
+  }
+}
+
+.NoteSubmit {
+  border: 1px solid $color-white-2;
+  &:hover {
+    background: $color-green-5;
+  }
+  svg {
+    color: $color-green-0;
+  }
+}
+
+.TimelineWrapper {
+  padding: 13px 0 0 7px;
+  height: 400px;
+  overflow-y: scroll;
+  [class*="ant-timeline-item-head"] {
+    width: 12px;
+    height: 12px;
+  }
+  [class*="ant-timeline-item-tail"] {
+    inset-inline-start: 5px;
+    border-inline-start: 2px solid #d3dced;
+  }
+  [class="ant-timeline-item-content"] {
+    inset-block-start: -3px;
+  }
+}
+.TimelineItem {
+  [class*="ant-timeline-item-head"] {
+    color: $color-blue-0;
+    border-color: $color-blue-0;
+  }
+  &:not(:last-child) {
+    padding-bottom: 32px;
+  }
+  &:last-child {
+    padding-bottom: 0px;
+  }
+}
+.TimelineTextWrapper {
+  h3 {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $color-blue-2;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  label {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: $color-green-2;
+    padding: 2px 5px 4px;
+    background: $color-green-5;
+    border-radius: 4px;
+  }
+  p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    color: $color-blue-2;
+    margin-bottom: 8px;
+    span {
+      font-weight: 600;
+      color: $color-green-2;
+    }
+  }
+  a {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: $color-green-0;
+    border-bottom: 1px solid $color-green-0;
+    display: inline-block;
+    padding-bottom: 2px;
+  }
+}
+.MapCandidatePopup {
+  width: 397px !important;
+  h2 {
+    margin-bottom: 40px;
+  }
+  [class="ant-modal-footer"] {
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    button {
+      margin: 0 !important;
+    }
+  }
+  [class="ant-modal-content"] {
+    padding: 20px 24px 24px;
+  }
+}
+.SelectVacancyGroup {
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.SelectVacancyRadioBtn {
+  flex-basis: 100% !important;
+  gap: 4px;
+  padding: 16px 10px 16px 14px !important;
+  [class*="ant-radio"] {
+    align-self: center !important;
+    margin: 0 !important;
+  }
+  h3 {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $color-blue-2;
+    margin-bottom: 8px;
+  }
+  h4 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: $color-green-1;
+  }
+}
+.PreviousInterviewStatus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 24px;
+  h2 {
+    margin: 0;
+  }
+}
+.PreviousInterviewStatusPercentage {
+  background: $color-white-1;
+  border-radius: 4px;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  @include font-bold-16($line-height: 23px);
+  color: $color-green-2;
+  margin-bottom: 24px;
+}
+.PreviousInterviewStatusNegative {
+  border-left: 3px solid $color-red-0;
+  span {
+    color: $color-red-0;
+  }
+}
+.PreviousInterviewStatusPositive {
+  border-left: 3px solid $color-green-7;
+  span {
+    color: $color-green-7;
+  }
+}
+.EvaluationBtn {
+  height: 34px;
+  padding: 8px 12px;
+  span {
+    line-height: 0;
+  }
+}
+@media (max-width: 1300px) {
+  .HrRoundDetailsSection {
+    .HrDetailsWrapper {
+      flex-direction: column;
+    }
+  }
+  .HrDetailsStatus {
+    width: 100%;
+  }
+  .HrDetailsProfessional {
+    width: 100%;
+  }
+  .HrDetailsResume {
+    width: 100%;
+  }
+  .HrDetailsActivity {
+    width: 100%;
+  }
+  .HrRoundDetailsSection {
+    iframe {
+      min-height: 50vh;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .HrDetailsProfessionalDetails {
+    flex-wrap: wrap;
+  }
+  .ProfessionalContent {
+    flex-basis: 100%;
+    .JoinDatePicker,
+    input {
+      width: 100%;
+    }
+  }
+  .HrDetailsProfessionalActive {
+    .EditProfessional {
+      max-width: 100%;
+    }
+  }
+  .PreviousInterviewStatusPercentage {
+    padding: 5px 12px;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .PreviousInterviewStatus {
+    padding-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 12px;
+    h2 {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .BreadcrumbContactInfo {
+    flex-direction: column;
+    align-items: flex-start !important;
+    span {
+      font-size: 1rem;
+    }
+  }
+  .BreadcrumbIconSeperator {
+    display: none;
+  }
+  .HeaderMoreBtn {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .EvaluationBtn {
+    width: 100%;
+  }
+}

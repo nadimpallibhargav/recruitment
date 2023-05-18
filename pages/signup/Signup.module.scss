@@ -1,0 +1,15 @@
+@import 'styles/variables.scss';
+    
+.signupSection {
+    .signupFormWrapper {
+        width: 784px;        
+    }
+    button {
+        width: 210px;
+    }
+    @media (max-width: 768px) {
+        button {
+            width: 100%;
+        }
+    }
+}

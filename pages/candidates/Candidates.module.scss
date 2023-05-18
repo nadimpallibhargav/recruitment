@@ -1,0 +1,89 @@
+@import "../../styles/variables.scss";
+
+.MappedFilter {
+  [class*="ant-select-arrow"] {
+    top: 60% !important;
+  }
+}
+
+.AsideFiltersWrapper {
+  padding: 24px 16px 32px !important;
+  h3 {
+    width: 100%;
+    display: block;
+    margin-bottom: 8px;
+    @include font-medium-14($line-height: 19px);
+    color: $color-green-2;
+  }
+}
+
+.DateFilterWrapper {
+  display: flex;
+  gap: 18px;
+  border-top: 1px solid $color-green-5;
+  padding-top: 24px;
+}
+
+.ExperienceInput {
+  z-index: 0 !important;
+}
+
+.DatePick {
+  padding: 12px;
+  height: 40px;
+  svg {
+    color: $color-green-2 !important;
+  }
+}
+
+.FilterSelectWrapper {
+  &:not(:last-of-type) {
+    margin-bottom: 24px;
+  }
+
+  margin-bottom: 24px;
+}
+
+.ExperienceInputWrapper {
+  margin-top: 10px;
+  width: 100%;
+}
+.SelectedHeading {
+  gap: 10px;
+}
+.AddBtnDesk {
+  display: inline-flex !important;
+}
+@media (max-width: 1300px) {
+  .CandidatesWrapper {
+    flex-wrap: wrap;
+  }
+  .AsideFiltersWrapper {
+    flex-basis: 100% !important;
+  }
+  .AsideFiltersWrapper,
+  .TableContent {
+    flex-basis: 100% !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .AsideFiltersWrapper {
+    gap: 0 !important;
+    button {
+      width: 100% !important;
+    }
+  }
+  .FilterSelectWrapper {
+    width: 100%;
+  }
+  .SelectedSearchWrapper {
+    width: 100%;
+  }
+  .SelectedHeading {
+    flex-direction: column-reverse;
+  }
+  .AddBtnDesk {
+    width: 100%;
+  }
+}

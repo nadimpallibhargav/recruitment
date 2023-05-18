@@ -1,0 +1,414 @@
+@import "../../styles/variables.scss";
+
+.AnalyticsSection {
+  padding-bottom: 24px;
+  .Header {
+    padding: 19px 0 16px;
+  }
+  .HeaderButtons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
+    .greenBtn {
+      svg {
+        vertical-align: inherit;
+      }
+    }
+    .MoreBtn {
+      border: 1px solid #d0d9d6 !important;
+      color: $color-blue-2 !important;
+      width: 40px !important;
+      display: flex;
+      align-items: center;
+      background: transparent;
+      justify-content: center;
+      svg {
+        vertical-align: middle;
+      }
+    }
+    .editBtn {
+      height: 44px;
+      padding: 4px 14px;
+      background: transparent;
+    }
+    &Mobile {
+      justify-content: center;
+      padding: 15px;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      gap: 10px;
+      background-color: $color-white-0;
+      z-index: 7;
+    }
+  }
+
+  .DashboardWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .DashboardContent {
+    flex-basis: 80%;
+  }
+  .TotalCandidates {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 24px;
+    .card {
+      flex-grow: 1;
+      padding: 16px 24px;
+      background: $color-white-0;
+      border-radius: 8px;
+      h2 {
+        margin-bottom: 4px;
+        @include font-medium-14($line-height: 22px);
+        color: $color-blue-2;
+      }
+      h3 {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 44px;
+        letter-spacing: -0.02em;
+        color: $color-green-1;
+        span {
+          @include font-medium-14($line-height: 22px);
+          color: $color-blue-2;
+          padding-left: 12px;
+        }
+      }
+    }
+  }
+  .Graphs {
+    background-color: $color-white-0;
+    border-radius: 8px;
+    padding: 18px 24px 16px;
+    .GraphHeading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid $color-green-5;
+      padding-bottom: 10px;
+      h2 {
+        @include font-bold-16($line-height: 23px);
+        color: $color-green-1;
+      }
+    }
+  }
+  .Piegraph {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+  .PiegraphCard {
+    background-color: $color-white-0;
+    padding: 19px 24px 16px;
+    // flex-basis: 33.3%;
+    border-radius: 8px;
+    // flex-grow: 1;
+    h2 {
+      @include font-bold-16;
+      color: $color-green-1;
+      padding-bottom: 11px;
+      border-bottom: 1px solid $color-green-5;
+    }
+    canvas {
+      height: 218px !important;
+      margin: auto;
+    }
+  }
+  .DetailsWrapper {
+    padding: 24px;
+    background-color: $color-white-0;
+    border-radius: 8px;
+    h2 {
+      @include font-bold-16($line-height: 23px);
+      color: $color-green-1;
+      margin-bottom: 12px;
+    }
+    p {
+      @include font-medium-14($line-height: 22px);
+      color: $color-green-2;
+      margin-bottom: 24px;
+    }
+    ul {
+      padding-left: 26px;
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+    li {
+      @include font-medium-14($line-height: 22px);
+      color: $color-green-2;
+      list-style-type: disc;
+    }
+  }
+  .HrDetailsHeadingIcon {
+    margin-bottom: 6px;
+    h2 {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .GraphPieWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 24px;
+    .GraphPieCard {
+      flex-grow: 1;
+      width: 31%;
+      &:first-child {
+        width: 100%;
+      }
+    }
+    .GraphPieCard:first-child:nth-last-child(2),
+    .GraphPieCard:first-child:nth-last-child(2) ~ .GraphPieCard {
+      &:first-child {
+        width: 66%;
+      }
+    }
+  }
+  [class="g2-tooltip-value"],
+  [class="g2-tooltip-title"] {
+    font-weight: 700;
+  }
+
+  @media (min-width: 992px) {
+    .HeaderButtons {
+      &Mobile {
+        display: none;
+      }
+    }
+  }
+}
+
+.AnalyticsGraphWrapper {
+  padding-top: 8px;
+}
+
+// ============
+
+.DashboardSide {
+  flex-basis: 20%;
+  background: $color-white-0;
+  padding: 24px;
+  border-radius: 8px;
+  h5 {
+    @include font-medium-14($line-height: 19px);
+    color: $color-green-2;
+    margin-bottom: 8px;
+  }
+  h4 {
+    @include font-semibold-14($line-height: 18px);
+    color: $color-green-1;
+    display: inline-block;
+  }
+  .LabelWrapper {
+    gap: 12px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .Label {
+    padding: 5px 10px;
+    background: $color-green-5;
+    border-radius: 4px;
+    @include font-medium-14($line-height: 22px);
+    color: $color-green-1;
+  }
+}
+
+.SideText {
+  &:not(:last-child) {
+    h4 {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .DashboardWrapper {
+    flex-wrap: wrap;
+  }
+  .DashboardSide {
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 10px;
+    h4 {
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+    .Label {
+      font-size: 14px;
+    }
+    .SideText {
+      &:not(:last-child) {
+        .LabelWrapper {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+  .DashboardContent {
+    flex-basis: 100%;
+  }
+  .SideText {
+    flex-basis: 23%;
+  }
+
+  .HeaderButtons {
+    &Desk {
+      .greenBtn {
+        display: none;
+      }
+    }
+  }
+
+  .GraphPieWrapper {
+    .GraphPieCard {
+      width: 100%;
+      &:first-child {
+        width: 100%;
+      }
+    }
+    .GraphPieCard:first-child:nth-last-child(2),
+    .GraphPieCard:first-child:nth-last-child(2) ~ .GraphPieCard {
+      &:first-child {
+        width: 100%;
+      }
+    }
+  }
+  .Details {
+    max-height: 100%;
+    overflow: initial;
+  }
+}
+
+@media (max-width: 769px) {
+  .DashboardSide {
+    .LabelWrapper {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  .HeaderButtonsDesk {
+    gap: 0px;
+  }
+  .SideText {
+    flex-basis: 32%;
+  }
+
+  .Piegraph {
+    flex-direction: column;
+  }
+  .PiegraphCard {
+    flex-basis: 100%;
+    padding: 19px 15px 16px;
+  }
+  .JobTitle {
+    h1 {
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+  .Header {
+    align-items: flex-start;
+  }
+  .HeaderButtons {
+    .editBtn {
+      height: 33px;
+      padding: 4px 9px;
+    }
+  }
+  .DetailsWrapper {
+    padding: 24px 15px;
+    background-color: $color-white-0;
+    border-radius: 8px;
+    h2 {
+      @include font-semibold-16($line-height: 18px);
+      color: $color-green-1;
+      margin-bottom: 12px;
+    }
+    p {
+      @include font-regular-14;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      @include font-regular-14;
+    }
+  }
+  .Graphs {
+    padding: 10px 15px 16px;
+    .GraphHeading {
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+  }
+  .DashboardSide {
+    padding: 15px;
+  }
+  .TotalCandidates {
+    flex-wrap: wrap;
+    .card {
+      padding: 10px 15px;
+      h2 {
+        font-size: 14px;
+      }
+      h3 {
+        font-size: 18px;
+      }
+    }
+  }
+}
+@media (max-width: 569px) {
+  .DashboardSide {
+    gap: 15px;
+    .LabelWrapper {
+      flex-direction: initial;
+    }
+  }
+  .SideText {
+    flex-basis: 100%;
+    h5 {
+      margin-bottom: 4px;
+    }
+  }
+  .HeaderButtons {
+    &Mobile {
+      flex-direction: column;
+      a {
+        width: 100%;
+      }
+      .greenBtn {
+        width: 100%;
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+    .MoreBtn {
+      width: 30px !important;
+      height: 30px !important;
+    }
+  }
+  .Header {
+    gap: 12px;
+  }
+}
+
+.SideText {
+  &:not(:last-child) {
+    .LabelWrapper {
+      margin-bottom: 24px;
+    }
+  }
+}

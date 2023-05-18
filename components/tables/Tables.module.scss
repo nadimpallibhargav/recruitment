@@ -1,0 +1,208 @@
+@import "../../styles/variables.scss";
+
+.TableHeading {
+  gap: 16px;
+}
+
+.FixedTableDetailsWrapper {
+  [class="ant-tabs-content-holder"] {
+    padding-inline: 24px;
+    background-color: $color-white-0;
+  }
+  [class*="ant-table-pagination-right"] {
+    position: absolute;
+    right: -24px !important;
+    padding-bottom: 24px;
+  }
+}
+
+.FixedTableWrapper {
+  table {
+    padding: 0 0px 24px;
+  }
+}
+
+.tableWrapper {
+  table {
+    td {
+      width: initial !important;
+    }
+    .questionsColumn {
+      min-width: 371px !important;
+    }
+    .questionsCommonColumn {
+      white-space: nowrap;
+    }
+    .ExperienceColumn {
+      width: 10% !important;
+    }
+    .CommonColumnWith {
+      width: initial !important;
+      padding-inline: 16px !important;
+    }
+    .PaymentVacancyDetails {
+      white-space: nowrap;
+    }
+  }
+}
+
+.QrManageUserEditColumn {
+  max-width: 114px !important;
+}
+
+.CommonColumnWith {
+  width: initial !important;
+}
+
+@media (min-width: 1100px) {
+  .FixedTableWrapper {
+    table {
+      padding: 0 0px 24px;
+      thead {
+        [class*="ant-table-cell"] {
+          &:not(:first-of-type) {
+            padding: 9px 16px !important;
+          }
+        }
+      }
+      tbody {
+        [class*="ant-table-cell"] {
+          padding: 9px 16px !important;
+          &:last-of-type {
+            padding: 11px 8px !important;
+          }
+          &:not(:first-of-type) {
+            padding: 9px 16px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1300px) {
+  .FixedTableWrapper {
+    table {
+      th,
+      td {
+        width: initial !important;
+      }
+      .vacancyOrganizationColumn {
+        min-width: 375px !important;
+      }
+      .AvailableAtFixedColumn {
+        min-width: 100px !important;
+      }
+      .ResportFixedColumn {
+        min-width: 75px !important;
+      }
+      .ScheduleFixedColumn {
+        min-width: 120px !important;
+      }
+    }
+  }
+  .tableWrapper {
+    table {
+      .PaymentDate {
+        min-width: 182px !important;
+      }
+      .PaymentVacancyDetails {
+        min-width: 520px !important;
+      }
+      .PaymentCallCredit {
+        min-width: 321px !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 1401px) {
+  .FixedTableWrapper {
+    table {
+      th,
+      td {
+        width: initial !important;
+      }
+      .vacancyOrganizationColumn {
+        min-width: 434px !important;
+      }
+      .AvailableAtFixedColumn {
+        min-width: 122px !important;
+      }
+      .candidateNameFixedColumn {
+        min-width: 212px !important;
+      }
+      .ResumeFixedColumn {
+        min-width: 87px !important;
+      }
+      .MobileFixedColumn {
+        min-width: 66px !important;
+      }
+      .ViewLinkFixedColumn {
+        min-width: 50px !important;
+      }
+      .ResportFixedColumn {
+        min-width: 82px !important;
+      }
+      .ScheduleFixedColumn {
+        min-width: 120px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 1366px) {
+  .tableWrapper {
+    table {
+      .questionsColumn {
+        min-width: 200px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .tableWrapper {
+    table {
+      .questionsColumn {
+        min-width: initial !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .TableHeading {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  .SearchWrapper {
+    margin-left: initial;
+    width: 100%;
+  }
+  .FixedTableWrapper {
+    table {
+      thead,
+      tbody {
+        [class*="ant-table-cell"] {
+          position: initial !important;
+        }
+      }
+    }
+  }
+  .FixedTableDetailsWrapper {
+    [class="ant-tabs-content-holder"] {
+      padding-inline: 0px;
+    }
+    [class*="ant-table-pagination-right"] {
+      right: 0px !important;
+    }
+  }
+  .tableWrapper {
+    table {
+      .questionsColumn {
+        white-space: nowrap;
+      }
+    }
+  }
+}

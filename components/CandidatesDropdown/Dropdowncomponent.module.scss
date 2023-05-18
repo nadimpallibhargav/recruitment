@@ -1,0 +1,81 @@
+@import "../../styles/variables.scss";
+
+.tagsWrapper {
+  display: flex;
+  column-gap: 12px;
+  flex-wrap: wrap;
+}
+.SelectDrop {
+  color: inherit;
+}
+.selectDropdown {
+  min-width: 17%;
+  background-color: $color-white-0;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px 0 rgb(0 0 0 / 8%), 0 3px 6px -4px rgb(0 0 0 / 12%),
+    0 9px 28px 8px rgb(0 0 0 / 5%);
+  [class*="ant-dropdown"] {
+    z-index: 1 !important;
+  }
+  li {
+    color: $color-blue-2 !important;
+    cursor: pointer;
+    background: $color-white-0 !important;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    &:first-child {
+      border-radius: 4px 4px 0px 0px;
+    }
+    &:last-child {
+      border-radius: 0px 0px 4px 4px;
+    }
+    &:hover {
+      background: $color-green-5 !important;
+      color: $color-green-1 !important;
+    }
+  }
+}
+
+.SelectButton {
+  height: 40px;
+  background: $color-white-0;
+  border: 1px solid $color-white-2;
+  border-radius: 4px;
+  padding: 1px 14px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: #bdcbca;
+  width: 100%;
+  justify-content: space-between;
+  [class*="anticon-down"] {
+    vertical-align: middle;
+    svg {
+      color: $color-blue-2;
+      font-size: 10px;
+    }
+  }
+}
+
+.SelectTag {
+  background: $color-green-5;
+  border-radius: 4px;
+  border: none;
+  padding: 5px 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-green-1;
+  margin: 0;
+  margin-top: 12px;
+  [class*="anticon-close"] {
+    margin-inline-start: 10px;
+  }
+}
+
+.SelectButtonText {
+  width: 100%;
+  justify-content: space-between;
+}

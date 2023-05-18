@@ -1,0 +1,31 @@
+@import "../../styles/variables.scss";
+
+.InterviewerWrapper {
+  padding: 24px 0 13px;
+}
+.questionsWrapper {
+  margin-top: 6px;
+  padding: 0 12px 0;
+}
+.question {
+  &:not(:last-child) {
+    padding-bottom: 24px;
+  }
+
+  h3 {
+    color: #919bac;
+    @include font-semibold-12($line-height: 24px);
+    label {
+      color: $color-white-0;
+    }
+    padding-bottom: 4px;
+  }
+  h4 {
+    @include font-medium-14($line-height: 19px);
+    color: $color-white-0;
+  }
+}
+
+.outputWrapper {
+  margin-bottom: 0;
+}

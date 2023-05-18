@@ -1,0 +1,30 @@
+@import "../../styles/variables.scss";
+
+.audioWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.PlayIcon {
+  cursor: pointer;
+  span {
+    vertical-align: middle;
+  }
+  svg {
+    width: 16px;
+    height: 16px;
+    color: $color-green-0;
+  }
+}
+
+.ProgressWrapper {
+  width: 100%;
+  input {
+    vertical-align: middle;
+  }
+}
+
+.progressBar {
+  margin: 0;
+}

@@ -1,0 +1,1014 @@
+@import "../../styles/variables.scss";
+
+.HrRoundRadioGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.tableCellIcon {
+  cursor: pointer;
+  font-size: 17px !important;
+  color: $color-green-0 !important;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $color-green-5;
+  background: $color-white-0 !important;
+  border-radius: 8px;
+  margin: auto;
+  &:hover {
+    border: 1px solid $color-green-0;
+  }
+  @media (max-width: 768px) {
+    font-size: 12px !important;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+  }
+}
+
+.tableCellSubData {
+  @include font-medium-12($line-height: 14px);
+  color: $color-blue-2;
+  display: block;
+  padding: 2px 0 0;
+  &:not(:first-of-type) {
+    padding: 4px 0 0;
+  }
+}
+
+.QrClientsExperienceColumn {
+  [class*="ant-table-column-sorters"] {
+    justify-content: center !important;
+  }
+}
+
+.vacancyOrganizationColumn {
+  white-space: nowrap;
+}
+
+.tableCellCompany {
+  display: block;
+  padding-top: 4px;
+  color: $color-blue-2;
+}
+
+.TableCellEditInput {
+  border: 1px solid $color-white-2;
+  border-radius: 4px;
+  width: 58px;
+  padding: 8px 8px 6px !important;
+  height: 32px;
+  @include font-medium-16($line-height: 18px);
+  color: $color-green-2;
+}
+.TableCellEditIcon {
+  margin-left: 10px;
+}
+.TableEditConfirmIcon {
+  width: 16px !important;
+  height: 16px !important;
+}
+.TableCellEditWrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.TableCellTechStack {
+  display: block;
+  &:not(:first-child) {
+    padding-top: 8px;
+  }
+}
+.TechstackColumn {
+  width: 15%;
+}
+
+.modalDatePicker {
+  border: 1px solid $color-white-2;
+  border-radius: 4px;
+  height: 40px;
+  width: 100%;
+  input {
+    &::placeholder {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      color: $color-black-2;
+    }
+  }
+  svg {
+    color: $color-green-2;
+  }
+}
+
+.resumeModal {
+  width: 870px !important;
+}
+
+.ResumePopup {
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-radius: 10px;
+  min-height: 300px;
+}
+
+.SelectedSearchWrapper {
+  display: inline-flex;
+  margin-left: auto;
+}
+
+.SearchComponent {
+  display: inline-block;
+}
+
+.search {
+  min-width: 328px;
+  [class*="ant-input-group"] {
+    border-radius: 8px;
+    justify-content: left !important;
+    [class*="ant-input-group-addon"] {
+      flex-basis: 34px !important;
+      width: 34px !important;
+      button {
+        height: 34px !important;
+      }
+    }
+  }
+
+  button {
+    border: 1px solid $color-white-2 !important;
+    height: 34px !important;
+    svg {
+      font-size: 14px !important;
+    }
+    span {
+      color: $color-black-2;
+    }
+  }
+  input {
+    padding-left: 0 !important;
+    height: 34px !important;
+    &::placeholder {
+      color: $color-black-2 !important;
+    }
+  }
+}
+.RoundsWrapper {
+  padding: 24px 16px;
+  h5 {
+    margin-bottom: 16px !important;
+  }
+}
+
+.QrAdminInterviewArrow {
+  border: none;
+  background: transparent !important;
+  &:hover {
+    border: none;
+    background: #efefef !important;
+  }
+}
+.HrRoundSection {
+  .RoundsWrapper {
+    padding: 24px 16px;
+    h5 {
+      margin-bottom: 16px !important;
+    }
+  }
+  .HrRoundRadio {
+    @include font-medium-14($line-height: 22px);
+    color: $color-blue-2;
+    &:not(:last-of-type) {
+      margin-bottom: 16px;
+    }
+  }
+  [class*="ant-radio-wrapper-checked"] {
+    font-weight: 600;
+    color: $color-green-1;
+  }
+  .TableHeading {
+    padding: 32px 24px 16px;
+    background: $color-white-0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    h2 {
+      @include font-semibold-18($line-height: 18px);
+    }
+  }
+  .HrRoundTabs {
+    [role*="tablist"] {
+      margin-bottom: 0 !important;
+      padding: 0px 24px 24px;
+      background: $color-white-0;
+    }
+    [class*="ant-tabs-tab-active"] {
+      .HrRoundTab {
+        color: $color-green-0;
+      }
+      label {
+        background: $color-green-0;
+        color: $color-white-0;
+      }
+    }
+    [class="ant-tabs-nav-list"] {
+      border-bottom: 1px solid $color-green-5;
+    }
+  }
+  .HrRoundTab {
+    @include font-semibold-14($line-height: 18px);
+    color: $color-blue-2;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-inline: 20px;
+    padding-bottom: 2px;
+    label {
+      cursor: pointer;
+      @include font-semibold-14($line-height: 18px);
+      width: 32px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $color-green-5;
+      border-radius: 60px;
+    }
+  }
+
+  table {
+    padding: 0 24px 24px;
+    border-radius: 0;
+    background: $color-white-0;
+    .ExperienceColumn {
+      width: 8% !important;
+    }
+    .TotalSpendingColumn {
+      width: 14% !important;
+    }
+    tr {
+      &:hover {
+        border-radius: 0;
+      }
+    }
+    .YetToInterviewAvailable {
+      width: 20%;
+    }
+    [class*="ant-table-column-title"] {
+      z-index: 0 !important;
+    }
+
+    [class*="ant-table-thead"] {
+      [class*="ant-table-cell"] {
+        padding: 11px 16px !important;
+        border: none !important;
+        border-radius: 0px 0px 0px 0px !important;
+        @include font-semibold-14($line-height: 18px);
+        color: $color-blue-2;
+        background: $color-white-1;
+        white-space: nowrap;
+        &:nth-of-type(2) {
+          width: 13%;
+        }
+        &:first-child {
+          border-start-start-radius: 8px !important;
+        }
+        &:last-child {
+          border-start-end-radius: 8px !important;
+          width: 13%;
+        }
+
+        &::before {
+          content: none !important;
+        }
+      }
+    }
+    tbody {
+      tr:first-child td {
+        border: none !important;
+      }
+      [class*="ant-table-cell"] {
+        border-radius: 0 !important;
+        border-top: 1px solid $color-green-5 !important;
+        padding: 11px 16px !important;
+        color: $color-green-2;
+        @include font-medium-14($line-height: 18px);
+        &:last-of-type {
+          padding: 24px 16px !important;
+        }
+        &:nth-of-type(2) {
+          width: 13%;
+        }
+        &:last-child {
+          width: 13%;
+        }
+      }
+      tr {
+        &:last-of-type {
+          [class*="ant-table-cell"] {
+            border-bottom: 0 !important;
+          }
+        }
+      }
+      .feedbackBtn {
+        font-weight: 600;
+        white-space: nowrap;
+      }
+    }
+  }
+  .ratingIcon {
+    max-width: 36px !important;
+    max-height: 36px !important;
+    span,
+    svg,
+    [class="ant-progress-inner"] {
+      max-width: 36px !important;
+      max-height: 36px !important;
+    }
+    [class="ant-progress-text"] {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+  .swapIcon {
+    transform: rotate(90deg) translateY(-6px);
+    margin-bottom: 6px;
+  }
+  .tablePhoneIcon {
+    svg {
+      transform: rotate(90deg);
+    }
+  }
+  .viewDetailsArrow {
+    font-size: 13px !important;
+  }
+  .viewDetailsLink {
+    @include font-semibold-14($line-height: 18px);
+    color: $color-blue-0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    white-space: nowrap;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  [class="ant-pagination-options"] {
+    order: -1;
+    margin-inline-start: 12px;
+    -webkit-margin-start: 12px;
+    margin-inline-end: 12px;
+    -webkit-margin-end: 12px;
+    margin-right: 12px;
+    [class="ant-select-selector"] {
+      align-items: center;
+      border: none !important;
+    }
+    [class="ant-select-selection-item"] {
+      font-weight: 500 !important;
+      font-size: 14px !important;
+      line-height: 20px !important;
+      color: $color-blue-2 !important;
+    }
+    [class="ant-select-arrow"] {
+      svg {
+        color: $color-green-2 !important;
+      }
+    }
+    [class="ant-select-arrow"] {
+      svg {
+        color: $color-green-2 !important;
+      }
+    }
+  }
+  [class*="ant-pagination-prev"] {
+    margin-inline-end: 12px;
+    [class*="anticon"] {
+      vertical-align: middle;
+    }
+    svg {
+      color: $color-green-2 !important;
+    }
+  }
+  [class*="ant-pagination-next"] {
+    [class*="anticon"] {
+      vertical-align: middle;
+    }
+    svg {
+      color: $color-green-2 !important;
+    }
+  }
+  [class*="ant-pagination-item"] {
+    &:not(:last-of-type) {
+      margin-inline-end: 12px;
+    }
+  }
+  [class*="ant-table-pagination-right"] {
+    margin: 32px 0 16px !important;
+    li {
+      background: $color-white-0 !important;
+      border: 1px solid $color-white-0 !important;
+      border-radius: 8px !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 36px !important;
+      height: 36px !important;
+      a {
+        color: $color-black-2;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+  [class*="ant-pagination-item-active"] {
+    a {
+      color: $color-green-2 !important;
+      font-weight: 600 !important;
+      font-size: 16px !important;
+    }
+  }
+
+  .HrRoundDatePicker {
+    width: 34px !important;
+    height: 34px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: 1px solid $color-green-5 !important;
+    background-color: $color-white-0 !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    &:hover {
+      border: 1px solid $color-green-0 !important;
+    }
+    input {
+      display: none !important;
+    }
+    [class*="anticon-calendar"] {
+      svg {
+        font-size: 18px;
+        color: $color-green-0 !important;
+      }
+    }
+    [class*="ant-picker-input"] {
+      justify-content: center !important;
+      text-align: center;
+    }
+    [class="ant-picker-suffix"] {
+      margin: 0 !important;
+    }
+  }
+  .searchMobile {
+    display: none;
+    margin: 20px 0 0;
+  }
+  [role="tablist"] {
+    &::before {
+      border: none !important;
+    }
+  }
+
+  .SelectedHeading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 24px !important;
+  }
+  .SelectedSearch {
+    display: inline-flex;
+  }
+
+  @media (max-width: 1200px) {
+    .HrRoundsWrapper {
+      flex-wrap: wrap;
+    }
+    .RoundsWrapper {
+      flex-basis: 100% !important;
+      flex-direction: column;
+      gap: 0 !important;
+    }
+    .HrRoundsContent {
+      flex-basis: 100% !important;
+    }
+  }
+  @media (max-width: 991px) {
+    .searchDesk {
+      display: none;
+    }
+    .searchMobile {
+      display: block;
+    }
+    [class="ant-tabs-tab-btn"] {
+      padding: 10px 0 !important;
+    }
+    .HrRoundTab {
+      font-size: 14px;
+    }
+
+    table {
+      [class*="ant-table-thead"] {
+        [class*="ant-table-cell"] {
+          font-size: 12px !important;
+          padding: 15px 6px !important;
+          white-space: nowrap;
+          &:first-of-type {
+            padding: 15px 10px !important;
+          }
+        }
+      }
+      tbody {
+        [class*="ant-table-cell"] {
+          font-size: 12px !important;
+          padding: 15px 6px !important;
+          &:first-of-type {
+            padding: 15px 10px !important;
+          }
+          &:last-of-type {
+            padding: 15px 6px !important;
+          }
+        }
+      }
+    }
+    .tableTagsWrapper {
+      gap: 5px;
+    }
+    .tableTag {
+      font-size: 12px;
+      padding: 2px 4px;
+    }
+    .tableTagNumber {
+      width: 22px;
+      height: 22px;
+    }
+  }
+  @media (max-width: 768px) {
+    .HrRoundTab {
+      padding: 20px 10px 0;
+      label {
+        font-size: 1rem;
+      }
+    }
+    .viewDetailsLink {
+      font-size: 1.2rem;
+      gap: 6px;
+    }
+    table {
+      overflow-x: scroll;
+      display: block;
+      max-width: 690px;
+      margin: auto;
+      padding: 0 6px 24px;
+    }
+    .HrRoundRadio {
+      width: 100%;
+    }
+    .HrRoundDatePicker {
+      width: 24px !important;
+      height: 24px !important;
+      border-radius: 4px !important;
+      [class*="anticon-calendar"] {
+        svg {
+          font-size: 12px;
+        }
+      }
+    }
+    .tableCellIcon {
+      font-size: 12px !important;
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+    }
+    .feedbackBtn {
+      white-space: nowrap;
+      height: 34px;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+    .ratingIcon {
+      max-width: 24px !important;
+      max-height: 24px !important;
+      span,
+      svg,
+      [class="ant-progress-inner"] {
+        max-width: 24px !important;
+        max-height: 24px !important;
+      }
+      [class="ant-progress-text"] {
+        font-size: 10px;
+        line-height: 18px;
+      }
+    }
+  }
+  @media (max-width: 630px) {
+    .search {
+      min-width: 100%;
+    }
+    table {
+      max-width: 550px;
+    }
+  }
+  @media (max-width: 580px) {
+    table {
+      max-width: 530px;
+    }
+    .RoundsWrapper {
+      padding: 24px 10px;
+    }
+    .HrRoundTabs {
+      [role*="tablist"] {
+        padding: 0px 10px 24px;
+      }
+    }
+    .HrRoundTab {
+      padding: 10px 5px 0;
+    }
+    .TableHeading {
+      padding: 32px 10px 0px;
+    }
+  }
+  @media (max-width: 560px) {
+    table {
+      max-width: 510px;
+    }
+  }
+  @media (max-width: 530px) {
+    table {
+      max-width: 475px;
+    }
+  }
+  @media (max-width: 500px) {
+    table {
+      max-width: 450px;
+    }
+  }
+  @media (max-width: 480px) {
+    table {
+      max-width: 430px;
+    }
+  }
+  @media (max-width: 460px) {
+    table {
+      max-width: 400px;
+      padding: 0;
+    }
+  }
+  @media (max-width: 430px) {
+    table {
+      max-width: 370px;
+    }
+  }
+  @media (max-width: 400px) {
+    table {
+      max-width: 340px;
+    }
+    .HrRoundTab {
+      font-size: 11px;
+      gap: 4px;
+      label {
+        font-size: 8px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  @media (max-width: 370px) {
+    table {
+      max-width: 315px;
+    }
+  }
+  @media (max-width: 345px) {
+    table {
+      max-width: 295px;
+    }
+  }
+}
+
+.tableTagsWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.tableTag {
+  color: $color-green-2 !important;
+}
+
+.GiveFeedbackModal {
+  width: 1156px !important;
+  max-width: 100%;
+  [class="ant-modal-content"] {
+    padding: 24px !important;
+  }
+  .ModalHeading {
+    margin-bottom: 40px;
+  }
+  h2 {
+    margin-bottom: 24px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 18px;
+    color: $color-green-1;
+  }
+  h3 {
+    padding-bottom: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: $color-green-2;
+  }
+  [class="ant-radio"],
+  [class*="ant-radio-checked"] {
+    display: none;
+  }
+  [class*="ant-radio-wrapper-checked"] {
+    background: $color-green-0;
+    color: $color-white-0;
+    span {
+      color: $color-white-0 !important;
+      font-weight: 600 !important;
+    }
+  }
+  .RadioBtn {
+    justify-content: center !important;
+    width: 72px;
+    padding: 0;
+    flex-basis: unset !important;
+    height: 32px;
+    &:hover {
+      background: #09b48b40;
+    }
+    span {
+      line-height: 30px;
+      font-weight: 400;
+      font-size: 12px;
+      color: $color-green-2;
+    }
+  }
+  form {
+    padding-top: 16px !important;
+  }
+  [class="ant-modal-footer"] {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+}
+.ModalFooterBtn {
+  margin: 0 !important;
+}
+.rejectBtn {
+  margin-left: auto;
+  margin-inline-start: auto !important;
+  border: 1px solid $color-red-0 !important;
+  color: $color-red-0 !important;
+  &:hover {
+    color: $color-red-0 !important;
+  }
+}
+.feedbackOptions {
+  margin-bottom: 24px;
+  justify-content: flex-start !important;
+  gap: 10px;
+}
+.matchCheckBox {
+  padding-bottom: 40px;
+}
+.CheckBox {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: $color-blue-2;
+}
+.inputGroup {
+  gap: 40px 24px;
+}
+.inputWrapper {
+  flex-basis: 31% !important;
+}
+.FeedbackInputWrapper {
+  width: 100%;
+  flex-basis: 100% !important;
+  textarea {
+    @include font-medium-14($line-height: 22px);
+    color: $color-green-1;
+    &::placeholder {
+      @include font-regular-14($line-height: 22px);
+      color: $color-black-2;
+    }
+  }
+}
+
+.CloseCandidateRoundModal {
+  width: 684px !important;
+  max-width: 100%;
+  [class="ant-modal-content"] {
+    padding: 20px 24px 24px !important;
+  }
+  [class="ant-modal-footer"] {
+    margin-top: 40px;
+  }
+}
+
+.EditCandidateDetailsModal {
+  width: 772px !important;
+  max-width: 100%;
+  [class="ant-modal-content"] {
+    padding: 24px !important;
+  }
+  [class="ant-modal-footer"] {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    button {
+      margin: 0 !important;
+    }
+  }
+}
+
+// schedule interview modal start
+
+.schedule {
+  &Weeks {
+    ul {
+      li {
+        h3 {
+          color: $color-blue-2;
+          @include font-medium-14;
+          padding-bottom: 12px;
+        }
+
+        label {
+          color: $color-blue-2;
+          @include font-semibold-20($line-height: 18px);
+          text-align: center;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.JobSkillsCheckbox {
+  row-gap: 24px;
+  column-gap: 12px;
+  flex-wrap: wrap;
+  @include font-regular-14($line-height: 19px);
+  color: $color-blue-2;
+  label {
+    position: relative;
+    width: 96px;
+    text-align: center;
+    border: 1px solid $color-white-2;
+    border-radius: 4px;
+    padding: 6px 0 6px 0;
+    margin: 0;
+    justify-content: center;
+  }
+  :hover {
+    background: $color-white-1 !important;
+    border-color: $color-white-2;
+  }
+
+  [class*="ant-checkbox-checked"] {
+    [class*="ant-checkbox-inner"] {
+      background: $color-green-5 !important;
+      border-color: $color-green-5;
+
+      &::after {
+        border-right: 2px solid $color-green-6;
+        border-bottom: 2px solid$color-green-6;
+      }
+    }
+
+    &::after {
+      border: 2px solid $color-green-5 !important;
+    }
+  }
+
+  [class*="ant-checkbox ant-checkbox-inner"] {
+    &::after {
+      border: 2px solid $color-green-6;
+    }
+  }
+
+  [class*="ant-checkbox-wrapper-checked"] {
+    background: $color-green-5;
+    border: 1px solid #95c7bb;
+    span {
+      color: $color-green-6 !important;
+    }
+    &:hover {
+      background: $color-green-5 !important;
+      border: 1px solid #95c7bb !important;
+      span {
+        background: $color-green-5 !important;
+        color: $color-green-6 !important;
+      }
+    }
+  }
+
+  .ant-checkbox {
+    display: none !important;
+  }
+
+  [class*="ant-checkbox-checked"] {
+    display: none !important;
+  }
+  .ant-checkbox-inner {
+    display: none !important;
+  }
+}
+
+.ScheduleInterviewModal {
+  [class="ant-tabs-nav-list"] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 26px;
+  }
+  [class="ant-tabs-tab"] {
+    width: 50%;
+    justify-content: center;
+  }
+  [class="ant-tabs-nav-list"] {
+    overflow: auto;
+  }
+  [class="ant-btn-default"] {
+    border-color: $color-green-0;
+  }
+  .SchecduleCustomSlot {
+    color: $color-green-2;
+    margin-bottom: 28px;
+    gap: 8px;
+    span {
+      font-weight: 500 !important;
+      font-size: 14px !important;
+      line-height: 22px !important;
+      color: $color-green-2 !important;
+    }
+  }
+  [class="ant-modal-footer"] {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 40px;
+    button {
+      margin: 0 !important;
+    }
+  }
+}
+
+.CustomSlotWrapper {
+  h3 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: $color-green-2;
+    margin-bottom: 8px;
+  }
+  .CustomSlotTimePicker {
+    width: 164px;
+    height: 44px;
+    border: 1px solid $color-white-2;
+    border-radius: 4px;
+    padding: 11px 14px;
+    input {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 22px;
+      color: $color-green-1;
+    }
+    svg {
+      color: $color-green-2;
+      font-size: 17px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .RoundsWrapper {
+    flex-basis: 100% !important;
+    flex-direction: column;
+    gap: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .inputWrapper {
+    flex-basis: 100% !important;
+  }
+}
+
+@media (max-width: 580px) {
+  .RoundsWrapper {
+    padding: 24px 10px;
+  }
+}
+
+// schedule interview modal end

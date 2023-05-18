@@ -1,0 +1,219 @@
+@import "../../styles/variables.scss";
+
+.TechCandidateJoinedSection {
+  padding-top: 48px;
+}
+.InterviewScreeningWrapper {
+  min-height: calc(100vh - 48px);
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.loadingErrorWrapper {
+  text-align: center;
+  padding-bottom: 32px;
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  li {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #919bac;
+  }
+  .loadingIconActive {
+    background-color: #089b78;
+  }
+  h1 {
+    color: $color-white-0;
+    @include font-semibold-20($line-height: 20px);
+    margin-bottom: 8px;
+  }
+  h2 {
+    @include font-medium-14($line-height: 22px);
+    color: #919bac;
+  }
+}
+
+.screeningWrapper {
+  text-align: center;
+  h2 {
+    @include font-medium-14($line-height: 19px);
+    color: $color-white-0;
+    padding-bottom: 16px;
+  }
+}
+
+.joinedPeoplesWrapper {
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  display: flex;
+}
+
+.joinedPerson {
+  max-width: 688px;
+  margin: auto;
+  padding: 159px 15px 12px;
+  align-self: center;
+  flex-grow: 1;
+  min-width: 48%;
+  [class*="PersonIconWrapper"] {
+    padding-bottom: 125px;
+  }
+  [class*="PersonAudioWrapper"] {
+    display: none;
+  }
+}
+
+.AudioWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.AudioIconBorder {
+  cursor: pointer;
+  border: 1px solid #d9ebe7;
+  color: #d9ebe7;
+  &:hover {
+    border: 1px solid #d9ebe7;
+    background: $color-blue-3;
+  }
+}
+
+.editorWrapper {
+  min-height: calc(100vh - 48px);
+  display: flex;
+  padding: 16px 0 16px;
+}
+.editorOptionsWrapper {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+.editorSpace {
+  flex-basis: 70%;
+  display: flex;
+  flex-direction: column;
+}
+.outputSpace {
+  flex-basis: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.techQuestionsWrapper {
+  background: $color-blue-3;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  min-height: 82px;
+  padding: 16px;
+}
+.AccordionWrapper {
+  max-height: 200px;
+  overflow-y: scroll;
+  border-radius: 0;
+}
+.techEditorWrapper {
+  background: $color-blue-3;
+  border-radius: 8px;
+  flex-grow: 1;
+}
+.outputWrapper {
+  background: $color-blue-3;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  flex-grow: 1;
+  min-height: 100px;
+}
+.joinedWrapper {
+  min-height: 166px;
+}
+.peopleWrapper {
+  display: flex;
+}
+.techjoinedPerson {
+  padding: 32px 12px 10px;
+  [class*="PersonIconWrapper"] {
+    padding-bottom: 0px;
+  }
+}
+.mediaWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  .AudioWrapper {
+    gap: 12px;
+  }
+  h4 {
+    @include font-medium-16($line-height: 24px);
+    color: $color-white-0;
+  }
+}
+.singlePersonWrapper {
+  max-width: 688px;
+  align-self: center;
+  min-width: 49%;
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    .ExpandIconWrapper {
+      opacity: 1;
+    }
+  }
+}
+.ExpandIconWrapper {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  opacity: 0;
+  z-index: 1;
+  padding: 4px;
+  border-radius: 24px;
+  &:hover {
+    background: $color-blue-3;
+  }
+}
+.ExpandIcon {
+  color: #d9ebe7;
+  font-size: 13px;
+  padding: 4px;
+  border-radius: 24px;
+}
+@media (max-width: 992px) {
+  .editorWrapper {
+    padding: 29px 0 16px;
+  }
+  .editorOptionsWrapper {
+    flex-direction: column;
+  }
+}
+@media (max-width: 769px) {
+  .joinedPeoplesWrapper {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .joinedPerson {
+    width: 100%;
+    padding: 30px 10px 10px;
+    [class*="PersonIconWrapper"] {
+      padding-bottom: 30px;
+    }
+  }
+  .mediaWrapper {
+    h4 {
+      font-size: 14px;
+    }
+  }
+  .singlePersonWrapper {
+    width: 100%;
+  }
+}

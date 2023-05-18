@@ -1,0 +1,94 @@
+@import "../../../styles/variables.scss";
+
+.QuestionsWrapper {
+  background: $color-blue-3;
+  border-radius: 8px;
+  padding: 16px 12px;
+  h2 {
+    @include font-semibold-14($line-height: 24px);
+    color: #919bac;
+    padding-bottom: 16px;
+  }
+}
+
+.InputWrapper {
+  @include font-medium-14($line-height: 19px);
+  color: $color-white-0;
+  &:not(:last-of-type) {
+    padding-bottom: 16px;
+  }
+
+  label {
+    display: inline-block;
+    padding-bottom: 10px;
+  }
+  input,
+  [class="ant-select-selector"] {
+    background: #121826 !important;
+    @include font-medium-14($line-height: 24px);
+    color: #919bac;
+    padding: 9px 14px !important;
+    border: 1px solid transparent !important;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 4px;
+    outline: none !important;
+    box-shadow: none !important;
+    &:focus {
+      border: 1px solid #414a5a !important;
+    }
+    &:hover {
+      border: 1px solid #414a5a !important;
+    }
+  }
+  [class="ant-select-selector"] {
+    [class="ant-select-selection-item"] {
+      color: $color-white-0 !important;
+    }
+  }
+  [class="ant-select-selection-placeholder"] {
+    @include font-medium-14($line-height: 24px);
+    color: #485164 !important;
+  }
+  input {
+    font-weight: 400px !important;
+    &::placeholder {
+      color: #485164 !important;
+      font-weight: 400px !important;
+    }
+  }
+  [class*="ant-picker-focused"] {
+    border: 1px solid #414a5a !important;
+  }
+}
+
+.JoiningDatePicker {
+  border: 1px solid transparent !important;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 4px;
+  height: 44px;
+  background: #121826 !important;
+  @include font-medium-14($line-height: 24px);
+  padding: 9px 14px !important;
+  input {
+    border: none !important;
+    color: #919bac !important;
+    padding-inline: 0 !important;
+    &::placeholder {
+      color: #485164 !important;
+      font-weight: 400px !important;
+    }
+    &:focus {
+      border: none !important;
+    }
+    &:hover {
+      border: none !important;
+    }
+  }
+  svg {
+    font-size: 19px;
+    color: #919bac;
+  }
+  [class="ant-picker-clear"] {
+    border-radius: 12px;
+  }
+}

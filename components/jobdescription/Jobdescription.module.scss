@@ -1,0 +1,13 @@
+@import "styles/variables.scss";
+
+.JobDescription {
+  position: relative;
+  .DeleteIcon {
+    position: absolute;
+    font-size: 16px;
+    padding: 2px;
+    right: 16px;
+    top: 21px;
+    color: $color-blue-2;
+  }
+}

@@ -1,0 +1,103 @@
+@import "styles/variables.scss";
+
+.otpSection {
+  .otpFormWrapper {
+    width: 635px !important;
+  }
+  button {
+    width: 210px;
+    margin-top: 40px;
+  }
+  @media (max-width: 768px) {
+    button {
+      width: 100% !important;
+    }
+  }
+}
+.otpEdit {
+  gap: 12px;
+}
+.formMainError {
+  padding-top: 8px;
+}
+.formMainErrorWrapper {
+  min-height: 32px;
+}
+.submitbtn {
+  color: #000;
+}
+.submitBtnWrapper {
+  button {
+    margin-top: 16px;
+  }
+}
+.otpMobile {
+  display: flex;
+  align-items: center;
+  .inputEdit {
+    display: flex;
+    align-items: center;
+  }
+  .EditIcon {
+    padding-left: 8px;
+  }
+  .InputEditWrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    a {
+      flex-shrink: 0;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 18px;
+      color: $color-blue-0;
+    }
+    input {
+      width: 110px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      color: $color-green-2;
+      padding: 8px;
+      height: 34px;
+    }
+  }
+  span {
+    padding-left: 4px;
+  }
+  .number {
+    color: $color-green-1 !important;
+    display: inline-block;
+    [class="editicon"] {
+      padding-left: 8px;
+    }
+  }
+  .editicon {
+    color: $color-green-0 !important;
+    font-size: 17px;
+  }
+  img {
+    cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+.otpStatus {
+  @include font-medium-14($line-height: 19px);
+  color: $color-blue-2;
+  margin-top: 16px;
+  span {
+    @include font-semibold-16($line-height: 22px);
+    color: $color-green-0;
+  }
+  a {
+    display: inline-block;
+  }
+}
+
+.otpMobileHeading {
+  display: block;
+}

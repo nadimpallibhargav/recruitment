@@ -1,0 +1,30 @@
+@import "styles/variables.scss";
+
+.signinSection {
+  padding: 103px 0 30px;
+  .signinFormWrapper {
+    margin: auto;
+    width: 420px;
+    max-width: 100%;
+  }
+  .signUpText {
+    display: none;
+    margin-top: 10px;
+    @include font-medium-14;
+    color: $color-blue-2;
+    span {
+      margin-right: 6px;
+    }
+    a {
+      @include font-semibold-14;
+      color: $color-green-0;
+      display: inline-block;
+    }
+    @media (max-width: 991px) {
+      display: block;
+    }
+  }
+  @media (max-width: 991px) {
+    padding: 50px 0;
+  }
+}

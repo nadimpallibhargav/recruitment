@@ -1,0 +1,796 @@
+@import "styles/variables.scss";
+
+.AddJob {
+  padding-bottom: 24px;
+  &BreadCrumbWrapper {
+    padding: 12px 0 8px;
+  }
+  &BreadCrumbText {
+    align-items: flex-end !important;
+  }
+  .breadCrumbTitle {
+    display: flex;
+    align-items: center;
+    a {
+      width: 12px;
+    }
+    h1 {
+      margin-bottom: 0 !important;
+      @include font-semibold-20;
+      color: $color-green-1;
+    }
+  }
+  .JobContent {
+    width: 1192px;
+    max-width: 100%;
+    margin: auto;
+  }
+  .StepsMobile {
+    display: flex;
+    justify-content: space-between;
+  }
+  .StepsTitleHeading {
+    position: relative;
+    padding-bottom: 16px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      height: 2px;
+      background-color: $color-green-0;
+    }
+  }
+  .StepsTitleHeadingOne {
+    &::before {
+      width: 150%;
+    }
+  }
+  .StepsTitleHeadingTwo {
+    &::before {
+      width: 200%;
+    }
+  }
+  .StepsTitleHeadingThree {
+    &::before {
+      width: 800%;
+    }
+  }
+  .stepsIndicator {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: $color-green-2;
+  }
+  .AddJobSteps {
+    padding-top: 0;
+    padding: 36px 36px 0;
+    background: $color-white-0;
+    border-radius: 8px 8px 0px 0;
+  }
+  .JobDescriptionWrapper {
+    padding: 24px 36px 36px;
+    background: $color-white-0;
+    border-radius: 0px 0px 8px 8px;
+    h2 {
+      @include font-bold-16($line-height: 23px);
+      color: $color-green-1;
+    }
+  }
+  .JobTabs {
+    color: $color-green-0;
+    [class="ant-radio"] {
+      margin: 0 3px 0 0 !important;
+    }
+    [class*="ant-radio-checked"] {
+      margin: 0 3px 0 0 !important;
+    }
+    [class="ant-radio-inner"] {
+      border-color: $color-blue-2 !important;
+    }
+    [class*="ant-radio-wrapper-checked"] {
+      color: $color-green-0 !important;
+      padding: 32px 8.2px 8px 3px !important;
+      [class="ant-radio-inner"] {
+        border-color: $color-green-0 !important;
+        background-color: $color-green-0 !important;
+      }
+    }
+  }
+
+  .JobTabsRadio {
+    padding: 32px 8px 8px 3px !important;
+    @include font-medium-14($line-height: 22px);
+    color: $color-blue-2;
+    [class*="ant-tooltip-content"] {
+      display: none !important;
+    }
+  }
+
+  .JobNextBtn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
+    margin-top: 24px;
+    button {
+      margin: 0 !important;
+    }
+    .JobBackBtn {
+      margin-right: auto !important;
+    }
+  }
+
+  .JobFormLink {
+    border: 1px solid $color-white-2;
+    border-radius: 8px;
+    padding: 32px 12px;
+  }
+  .JobFormLinkText {
+    text-align: center;
+    width: 730px;
+    max-width: 100%;
+    margin: auto;
+    h3 {
+      @include font-medium-16;
+      color: $color-green-2;
+      margin-bottom: 12px;
+    }
+    .uploadError {
+      margin-bottom: 24px;
+      padding-top: 0;
+    }
+  }
+  .FetchLinkForm {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 12px;
+    justify-content: space-between;
+    .FetchLinkBtn {
+      margin-top: 0;
+      display: inline-flex !important;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      span {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        color: $color-white-0;
+      }
+    }
+  }
+  .inputWrapper {
+    flex-grow: 1;
+  }
+  .FetchLinkFormItem {
+    margin-bottom: 0;
+  }
+
+  .WorkFromHomeLocation {
+    margin-bottom: 32px;
+    .form {
+      max-width: 348px;
+    }
+    .LocationSelect {
+      width: 100%;
+      [class*="ant-select-arrow"] {
+        svg {
+          color: $color-blue-2 !important;
+        }
+      }
+    }
+  }
+  .select {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    margin-bottom: 24px;
+
+    [class="ant-select-selection-search"] {
+      margin-inline-start: -3px;
+    }
+    [class="ant-select-selection-item"] {
+      height: 90%;
+      margin: 0;
+      align-items: center;
+      background: $color-green-5;
+      border-radius: 4px;
+      border: none;
+      padding: 5px 14px 5px 10px;
+    }
+    [class="ant-select-selector"] {
+      padding: 3px 14px 0px 10px;
+      border-radius: 3px;
+      border: 1px solid #c4ccca;
+    }
+    [class="ant-select-selection-overflow-item"] {
+      height: 28px;
+    }
+  }
+  .Experience {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    margin-bottom: 72px;
+    .InputTooltip {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+    }
+    .Tooltip {
+      background-color: $color-green-0;
+      border-radius: 4px;
+      color: $color-white-0;
+      padding: 5px 10px;
+      line-height: normal;
+      position: relative;
+      width: 34px;
+      text-align: center;
+      &::before {
+        position: absolute;
+        top: -8px;
+        background-color: $color-green-0;
+        width: 100%;
+        height: 8px;
+        left: 1px;
+        clip-path: path(
+          "M 6.343145750507619 8 A 4 4 0 0 0 9.17157287525381 6.82842712474619 L 14.585786437626904 1.414213562373095 A 2 2 0 0 1 17.414213562373096 1.414213562373095 L 22.82842712474619 6.82842712474619 A 4 4 0 0 0 25.65685424949238 8 Z"
+        );
+        content: "";
+      }
+    }
+  }
+  .ExperienceInputWrapper {
+    width: 31%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    label {
+      @include font-semibold-14($line-height: 19px);
+      color: $color-green-2;
+      margin-bottom: 14px;
+      display: inline-block;
+    }
+    .ExperienceInput {
+      margin: 6px 0 0;
+    }
+  }
+  .SuggestCheckBox {
+    [class*="ant-checkbox"] {
+      display: inline-flex !important;
+    }
+    span {
+      &:last-child {
+        @include font-medium-14($line-height: 22px);
+        color: $color-blue-2;
+        padding-inline-start: 11px;
+      }
+    }
+  }
+
+  .JobSkills {
+    margin-top: 32px;
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .JobSkillsCheckbox {
+    gap: 16px;
+    flex-wrap: wrap;
+    @include font-regular-14($line-height: 19px);
+    color: $color-green-1;
+    label {
+      position: relative;
+      border: 1px solid $color-white-2;
+      border-radius: 4px;
+      padding: 10px 16px;
+      margin: 0;
+    }
+    [class*="ant-checkbox-checked"] {
+      [class*="ant-checkbox-inner"] {
+        background: $color-green-5 !important;
+        border-color: $color-green-5;
+        &::after {
+          border-right: 2px solid $color-black-0;
+          border-bottom: 2px solid $color-black-0;
+        }
+      }
+      &::after {
+        border: 2px solid $color-green-5 !important;
+      }
+    }
+    [class*="ant-checkbox ant-checkbox-inner"] {
+      &::after {
+        border: 2px solid $color-black-0;
+      }
+    }
+    [class*="ant-checkbox-wrapper-checked"] {
+      background: $color-green-5;
+      border-color: $color-white-0 !important;
+      font-weight: 500;
+    }
+    .ant-checkbox {
+      display: none !important;
+    }
+    [class*="ant-checkbox-checked"] {
+      display: initial !important;
+    }
+  }
+
+  .ImportOption {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+    background: $color-white-0;
+    border: 1px solid $color-green-5;
+    border-radius: 8px;
+    padding: 28px 24px;
+  }
+  .ImportOptionBtn {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+  .ImportOptionText {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    .uploadIcon {
+      background: $color-green-5;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      border-radius: 50%;
+      color: $color-green-0;
+    }
+  }
+  .ImportOptionLink {
+    font-style: normal;
+    @include font-semibold-14($line-height: 18px);
+    color: $color-blue-0;
+  }
+  .OptionHeading {
+    h3 {
+      @include font-bold-16($line-height: 23px);
+      color: $color-green-2;
+      margin-bottom: 8px;
+    }
+    p {
+      @include font-medium-14($line-height: 18px);
+      color: $color-blue-2;
+    }
+  }
+  .ImportOptionBtn {
+    button {
+      width: 159px;
+      height: 34px;
+      justify-content: center;
+      max-width: 100%;
+      align-items: center;
+      display: inline-flex;
+      span {
+        @include font-semibold-14($line-height: 20px);
+        color: $color-green-0;
+      }
+    }
+  }
+}
+
+.pocModal {
+  width: 802px !important;
+  max-width: 100%;
+  h2 {
+    @include font-semibold-18($line-height: 18px);
+    color: $color-green-1;
+    margin-bottom: 24px;
+  }
+  [class="ant-modal-content"] {
+    padding: 20px 36px 36px;
+  }
+  [class="ant-modal-footer"] {
+    margin-top: 16px;
+  }
+  .inputGroup {
+    justify-content: space-between;
+  }
+}
+
+.addLocationModal {
+  width: 398px !important;
+}
+
+.JobUpload {
+  .uploadBtn {
+    display: inline-block;
+    margin-top: 4px;
+    margin-bottom: 19px;
+    @include font-semibold-14($line-height: 18px);
+  }
+  p.filesType {
+    margin-bottom: 35px !important;
+    @include font-medium-14($line-height: 22px);
+  }
+  [class*="ant-upload ant-upload-btn"] {
+    border-radius: 8px;
+  }
+  [class*="ant-upload-list-item"] {
+    width: 277px;
+    max-width: 100%;
+    height: auto !important;
+    padding: 0 !important;
+    flex-wrap: wrap !important;
+    text-align: left !important;
+    position: relative;
+    background: $color-green-5 !important;
+    margin: 0 !important;
+    border-radius: 6px;
+  }
+  [class*="ant-upload-list-item-thumbnail"] {
+    height: 144px !important;
+    flex-basis: 100% !important;
+    width: 100% !important;
+    background: $color-white-0 !important;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    img {
+      object-fit: cover !important;
+    }
+  }
+  [class*="ant-upload-list-item-name"] {
+    padding: 8px !important;
+    background: $color-green-5 !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    color: $color-green-2 !important;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    max-width: 50%;
+  }
+  [class*="ant-upload-list-item-actions"] {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    z-index: 1;
+    bottom: 8px;
+    right: 8px;
+    border-radius: 4px;
+    background: $color-green-5 !important;
+  }
+  .uploadIcon {
+    margin-top: 32px;
+  }
+  .JobUploadText {
+    border: 1px dashed $color-white-2 !important;
+    border-radius: 4px;
+  }
+}
+
+.uploadError {
+  padding-top: 12px;
+  text-align: center;
+  @include font-semibold-14($line-height: 18px);
+  color: $color-red-0;
+  .uploadCloseIcon {
+    margin-right: 6px;
+  }
+}
+
+.StepsTitle {
+  h3 {
+    @include font-semibold-18($line-height: 18px);
+    margin-bottom: 8px;
+    color: $color-black-2;
+  }
+
+  h4 {
+    @include font-medium-14($line-height: 22px);
+    color: $color-black-2;
+  }
+}
+
+.form {
+  background: $color-white-0 !important;
+  padding: 0px !important;
+  box-shadow: none !important;
+  border-radius: none !important;
+  h2 {
+    margin-bottom: 32px;
+    &:last-of-type {
+      margin-top: 16px;
+    }
+  }
+  [class*="ant-select-selector"] {
+    height: auto !important;
+    min-height: 40px;
+  }
+  [class="ant-select-selection-item"] {
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    color: $color-green-1;
+  }
+  [class="ant-select-selection-item-content"] {
+    margin-inline-end: 14px;
+  }
+  .select {
+    height: auto !important;
+    &:hover {
+      [class*="ant-select-selector"] {
+        border-color: $color-green-0 !important;
+      }
+    }
+    [class*="anticon-down"] {
+      text-align: right;
+    }
+    [class*="anticon anticon-close"] {
+      font-size: 12px;
+      vertical-align: inherit;
+      color: $color-green-2;
+    }
+    [class="ant-select-selection-overflow"] {
+      gap: 8px 12px;
+      flex-flow: wrap;
+    }
+  }
+}
+
+.JobRounds {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  [class*="ant-radio-wrapper-checked"] {
+    border: 1px solid $color-green-0 !important;
+  }
+}
+
+.RadioBtn {
+  border: 1px solid $color-white-2;
+  border-radius: 8px;
+  padding: 20px 24px;
+  flex-basis: 24%;
+  margin: 0 !important;
+  justify-content: flex-start !important;
+  span {
+    align-self: flex-start !important;
+    font-weight: 600;
+  }
+  [class="ant-radio"] {
+    margin-top: 4px !important;
+    margin-right: 10px !important;
+  }
+  [class*="ant-radio-checked"] {
+    margin-top: 4px !important;
+    margin-right: 10px !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .AddJob {
+    .stepsIndicator {
+      display: none;
+    }
+    .StepsMobile {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .JobRounds {
+    gap: 10px;
+  }
+  .RadioBtn {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 991px) {
+  .AddJob {
+    .StepsTitle {
+      h3 {
+        color: $color-green-1;
+      }
+    }
+    .StepsTitleWrapper {
+      border-bottom: 2px solid $color-green-5;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .StepsMobile {
+      overflow: hidden;
+      align-items: flex-start;
+    }
+    .StepsDesk {
+      display: none;
+    }
+    .ImportOption {
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  }
+  .AddJobSteps {
+    flex-direction: row !important;
+    gap: 20px;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      width: 100%;
+      height: 3px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-green-0;
+      border-radius: 4px;
+      margin-left: 10px;
+    }
+  }
+  .JobRounds {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .RadioBtn {
+    flex-basis: 23%;
+  }
+}
+
+@media (max-width: 769px) {
+  .AddJob {
+    .breadCrumbTitle {
+      h1 {
+        font-size: 14px;
+      }
+    }
+    .AddJobSteps {
+      padding: 20px 10px 0;
+    }
+    .RadioBtn {
+      flex-basis: 31%;
+    }
+    .JobDescriptionWrapper {
+      padding: 30px 10px 20px;
+    }
+    .JobUploadText {
+      .uploadIcon {
+        margin-top: 20px;
+      }
+    }
+    .uploadBtn {
+      margin-bottom: 20px;
+    }
+    .inputWrapper {
+      width: 100%;
+    }
+    .FetchLinkForm {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 15px;
+      .FetchLinkBtn {
+        width: 100% !important;
+      }
+    }
+    .Experience {
+      flex-wrap: wrap;
+      gap: 50px;
+    }
+    .ExperienceInputWrapper {
+      flex-basis: 100%;
+    }
+    .SuggestCheckBox {
+      span {
+        &:last-child {
+          font-size: 14px;
+        }
+      }
+    }
+    .JobTabsRadio {
+      padding: 20px 5px 0px 3px !important;
+    }
+    .JobTabs {
+      [class*="ant-radio-wrapper-checked"] {
+        padding: 20px 5px 0px 3px !important;
+      }
+      [class="ant-tabs-nav-list"] {
+        flex-direction: column;
+      }
+      [class="ant-tabs-tab"] {
+        margin: 0 !important;
+      }
+      [class="ant-tabs-tab-btn"] {
+        padding: 0 !important;
+      }
+    }
+    .ImportOption {
+      padding: 15px 10px;
+    }
+    .WorkFromHomeLocation {
+      .form {
+        max-width: 100%;
+      }
+    }
+  }
+  .uploadError {
+    font-size: 14px;
+  }
+  .StepsTitle {
+    h3 {
+      font-size: 16px;
+      margin-bottom: 3px;
+    }
+    h4 {
+      font-size: 12px;
+    }
+  }
+  .pocModal {
+    [class="ant-modal-content"] {
+      padding: 20px 10px;
+    }
+    [class="ant-modal-footer"] {
+      margin-top: 16px;
+      button {
+        width: 100% !important;
+        margin: 0 0 10px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 569px) {
+  .AddJob {
+    .RadioBtn {
+      flex-basis: 100%;
+      span {
+        font-size: 14px;
+      }
+    }
+    .ExperienceInputWrapper {
+      flex-basis: 100%;
+    }
+    .JobSkillsCheckbox {
+      gap: 6px;
+      label {
+        flex-basis: 100%;
+      }
+    }
+    .JobNextBtn {
+      flex-direction: column;
+      gap: 10px;
+      a {
+        width: 100%;
+      }
+      button {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+    .ImportOptionBtn {
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start;
+      width: 100%;
+      button {
+        width: 100%;
+        justify-content: center;
+      }
+      [class*="ant-upload"] {
+        width: 100%;
+        text-align: center;
+      }
+    }
+    .ImportOptionText {
+      gap: 10px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}

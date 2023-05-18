@@ -1,0 +1,43 @@
+@import "styles/variables.scss";
+
+.QuillWrapper {
+  background: $color-white-0;
+  border: 1px solid $color-white-2;
+  border-radius: 8px;
+  [class*="ql-editor"] {
+    border-top: 1px solid $color-green-5 !important;
+    height: 400px !important;
+    font-size: 16px;
+    overflow: scroll !important;
+    padding: 8px 0 0;
+    color: $color-black-0;
+  }
+  [class*="ql-toolbar"] {
+    border: none !important;
+    border-bottom: 1px solid $color-green-5;
+    padding: 0px 0 12px;
+  }
+  [class*="ql-container"] {
+    border: none !important;
+  }
+  [class="ql-formats"] {
+    button[type="button"] {
+      margin-right: 8px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    [class*="ql-active"] {
+      background: $color-green-5 !important;
+      border-radius: 4px !important;
+    }
+  }
+}
+
+.quill {
+  padding: 16px 16px 0;
+  [class="ql-stroke"] {
+    stroke: $color-blue-2 !important;
+  }
+}
