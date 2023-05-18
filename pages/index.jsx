@@ -1,15 +1,8 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.scss'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.scss";
+import Signin from "./signin";
 
 export default function Home() {
-  return (
-    <>
-      <section>
-        <div className="container">
-          
-        </div>
-      </section>
-    </>
-  )
+  return <Signin />;
 }
